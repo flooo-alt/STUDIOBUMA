@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adiba Photocopy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+</head>
+<body>
+    <!-- Main Page -->
+    <div id="mainPage">
+        <!-- Header -->
+        <header>
+            <nav>
+                <div class="logo">Foto-copy</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Layanan & Produk</a></li>
+                    <li><a href="#visit">Lokasi</a></li>
+                    <li><a href="#" class="admin-btn" id="adminBtn"> Admin</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Selamat Datang</h1>
+                <h1>Di Adiba Photocopy</h1>
+                <p>Layanan Fotocopy & Cetak Terpercaya</p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn btn-primary">Lihat Layanan/Produk kami</a>
+                    <a href="https://wa.me/6285191163819" target="_blank" class="btn btn-secondary">Chat WhatsApp</a>
+                </div>
+            </div>
+            <div class="hero-bg"></div>
+        </section>
+
+        <!-- Combined Services & Products Section -->
+        <section id="services" class="services-products-section">
+            <h2 class="section-main-title">✨ Layanan & Produk Kami</h2>
+            
+            <div class="combined-container">
+                <!-- LAYANAN (KIRI) -->
+                <div class="section-box">
+                    <div class="section-header">
+                        <h2>🛠️ Layanan Kami</h2>
+                        <p>Berbagai layanan profesional untuk kebutuhan Anda</p>
+                    </div>
+
+                    <!-- Preview Cards -->
+                    <div class="preview-cards">
+                        <div class="card-compact">
+                            <div class="icon">📋</div>
+                            <h3>Fotocopy Dokumen</h3>
+                            <span class="price-tag">Mulai Rp 100/lembar</span>
+                        </div>
+                        <div class="card-compact">
+                            <div class="icon">🖨️</div>
+                            <h3>Cetak Dokumen</h3>
+                            <span class="price-tag">Mulai Rp 300/lembar</span>
+                        </div>
+                        <div class="card-compact">
+                            <div class="icon">📚</div>
+                            <h3>Jilid & Laminating</h3>
+                            <span class="price-tag">Mulai Rp 5.000</span>
+                        </div>
+                    </div>
+
+                    <!-- Full Cards -->
+                    <div class="full-cards" id="servicesFullCards">
+                        <div class="card-full">
+                            <div class="icon-large">📋</div>
+                            <h3>Fotocopy Dokumen</h3>
+                            <p>Fotocopy dokumen dengan kualitas terbaik, hasil jernih dan tajam</p>
+                            <div class="price">Mulai Rp 100/lembar</div>
+                            <button class="order-btn" data-service="Fotocopy Dokumen">💬 Pesan Sekarang</button>
+                        </div>
+
+                        <div class="card-full">
+                            <div class="icon-large">🖨️</div>
+                            <h3>Cetak Dokumen</h3>
+                            <p>Cetak dokumen hitam putih atau berwarna dengan hasil profesional</p>
+                            <div class="price">Mulai Rp 300/lembar</div>
+                            <button class="order-btn" data-service="Cetak Dokumen">💬 Pesan Sekarang</button>
+                        </div>
+
+                        <div class="card-full">
+                            <div class="icon-large">📚</div>
+                            <h3>Jilid & Laminating</h3>
+                            <p>Jilid spiral, hard cover, dan laminating untuk berbagai kebutuhan</p>
+                            <div class="price">Mulai Rp 5.000</div>
+                            <button class="order-btn" data-service="Jilid & Laminating">💬 Pesan Sekarang</button>
+                        </div>
+
+                        <div class="card-full">
+                            <div class="icon-large">🎨</div>
+                            <h3>Cetak Foto</h3>
+                            <p>Cetak foto berbagai ukuran dengan kualitas photo paper premium</p>
+                            <div class="price">Mulai Rp 2.000</div>
+                            <button class="order-btn" data-service="Cetak Foto">💬 Pesan Sekarang</button>
+                        </div>
+
+                        <div class="card-full">
+                            <div class="icon-large">📄</div>
+                            <h3>Scan Dokumen</h3>
+                            <p>Scan dokumen dengan resolusi tinggi, format PDF atau JPG</p>
+                            <div class="price">Mulai Rp 500/lembar</div>
+                            <button class="order-btn" data-service="Scan Dokumen">💬 Pesan Sekarang</button>
+                        </div>
+
+                        <div class="card-full">
+                            <div class="icon-large">🎯</div>
+                            <h3>Desain & Layout</h3>
+                            <p>Jasa desain untuk undangan, banner, dan kebutuhan lainnya</p>
+                            <div class="price">Mulai Rp 50.000</div>
+                            <button class="order-btn" data-service="Desain & Layout">💬 Pesan Sekarang</button>
+                        </div>
+                    </div>
+
+                    <button class="show-more-btn" id="servicesToggleBtn">
+                        <span id="servicesToggleText">📖 Lihat Semua Layanan</span>
+                    </button>
+                </div>
+
+                <!-- PRODUK (KANAN) -->
+                <div class="section-box">
+                    <div class="section-header">
+                        <h2>📦 Produk Kami</h2>
+                        <p>Produk berkualitas untuk berbagai kebutuhan</p>
+                    </div>
+
+                    <!-- Preview Cards -->
+                    <div class="preview-cards">
+                        <div class="card-compact">
+                            <div class="icon">📋</div>
+                            <h3>Kertas HVS A4</h3>
+                            <span class="price-tag">Rp 45.000/rim</span>
+                        </div>
+                        <div class="card-compact">
+                            <div class="icon">📔</div>
+                            <h3>Jilid Softcover</h3>
+                            <span class="price-tag">Rp 8.000</span>
+                        </div>
+                        <div class="card-compact">
+                            <div class="icon">📕</div>
+                            <h3>Jilid Hardcover</h3>
+                            <span class="price-tag">Rp 25.000</span>
+                        </div>
+                    </div>
+
+                    <!-- Full Cards -->
+                    <div class="full-cards" id="productsFullCards">
+                        <div class="card-full">
+                            <div class="icon-large">📋</div>
+                            <h3>Kertas HVS A4</h3>
+                            <p>Kertas berkualitas tinggi untuk kebutuhan cetak dan fotocopy Anda</p>
+                            <ul>
+                                <li>1 Rim (500 lembar)</li>
+                                <li>80 gram premium</li>
+                                <li>Hasil cetak tajam</li>
+                                <li>Tidak mudah kusut</li>
+                            </ul>
+                            <div class="price">Rp 45.000</div>
+                            <button class="order-btn" data-product="Kertas HVS A4 - Rp 45.000">🛒 Beli Sekarang</button>
+                        </div>
+
+                        <div class="card-full">
+                            <div class="icon-large">📔</div>
+                            <h3>Jilid Softcover</h3>
+                            <p>Jilid dokumen dengan cover plastik bening dan spiral berkualitas</p>
+                            <ul>
+                                <li>Cover plastik jernih</li>
+                                <li>Spiral kawat/plastik</li>
+                                <li>Rapi dan profesional</li>
+                                <li>Berbagai ukuran</li>
+                            </ul>
+                            <div class="price">Rp 8.000</div>
+                            <button class="order-btn" data-product="Jilid Softcover - Rp 8.000">🛒 Beli Sekarang</button>
+                        </div>
+
+                        <div class="card-full">
+                            <div class="icon-large">📕</div>
+                            <h3>Jilid Hardcover</h3>
+                            <p>Jilid premium dengan cover tebal untuk dokumen penting</p>
+                            <ul>
+                                <li>Cover karton tebal</li>
+                                <li>Tahan lama</li>
+                                <li>Tampilan eksklusif</li>
+                                <li>Pilihan warna beragam</li>
+                            </ul>
+                            <div class="price">Rp 25.000</div>
+                            <button class="order-btn" data-product="Jilid Hardcover - Rp 25.000">🛒 Beli Sekarang</button>
+                        </div>
+
+                        <div class="card-full">
+                            <div class="icon-large">🖼️</div>
+                            <h3>Laminating</h3>
+                            <p>Laminating dokumen untuk perlindungan maksimal</p>
+                            <ul>
+                                <li>Plastik tebal berkualitas</li>
+                                <li>Tahan air dan robek</li>
+                                <li>Hasil glossy/doff</li>
+                                <li>Ukuran A4/F4</li>
+                            </ul>
+                            <div class="price">Rp 3.000</div>
+                            <button class="order-btn" data-product="Laminating - Rp 3.000">🛒 Beli Sekarang</button>
+                        </div>
+
+                        <div class="card-full">
+                            <div class="icon-large">📸</div>
+                            <h3>Cetak Foto Premium</h3>
+                            <p>Cetak foto dengan kualitas photo paper profesional</p>
+                            <ul>
+                                <li>Ukuran 4R, 5R, A4</li>
+                                <li>Photo paper glossy</li>
+                                <li>Warna tajam & natural</li>
+                                <li>Tahan lama</li>
+                            </ul>
+                            <div class="price">Rp 2.500</div>
+                            <button class="order-btn" data-product="Cetak Foto Premium - Rp 2.500">🛒 Beli Sekarang</button>
+                        </div>
+
+                        <div class="card-full">
+                            <div class="icon-large">✏️</div>
+                            <h3>Alat Tulis Kantor</h3>
+                            <p>Berbagai kebutuhan alat tulis untuk kantor dan sekolah</p>
+                            <ul>
+                                <li>Pulpen, pensil, penghapus</li>
+                                <li>Staples, isi staples</li>
+                                <li>Correction pen</li>
+                                <li>Dan lain-lain</li>
+                            </ul>
+                            <div class="price">Bervariasi</div>
+                            <button class="order-btn" data-product="Alat Tulis Kantor">🛒 Lihat Katalog</button>
+                        </div>
+                    </div>
+
+                    <button class="show-more-btn" id="productsToggleBtn">
+                        <span id="productsToggleText">📖 Lihat Semua Produk</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visit Section -->
+        <section id="visit" class="visit-section">
+            <h2 class="visit-title">📍 Kunjungi Kami</h2>
+
+            <div class="visit-container">
+                <div class="visit-info">
+                    <div class="visit-card">
+                        <h3>📌 Alamat</h3>
+                        <p>
+                            Jl. Ciawitali No.51,<br>
+                            Citeureup, Cimahi Utara,<br>
+                            Jawa Barat 40512
+                        </p>
+                    </div>
+
+                    <div class="visit-card">
+                        <h3>📞 Kontak</h3>
+                        <p><a href="tel:085191163819">0851-9116-3819</a></p>
+                    </div>
+
+                    <div class="visit-card">
+                        <h3>⏰ Jam Operasional</h3>
+                        <p>
+                            Senin – Jumat: 08.00 – 20.00<br>
+                            Sabtu: 08.00 – 18.00<br>
+                            Minggu: Libur
+                        </p>
+                    </div>
+
+                    <a href="https://maps.google.com?q=Jl.+Ciawitali+No.51+Cimahi" target="_blank" class="maps-btn">
+                        🗺️ Buka di Google Maps
+                    </a>
+                </div>
+
+                <div class="visit-map">
+                    <iframe
+                        src="https://www.google.com/maps?q=Jl.+Ciawitali+No.51+Cimahi&output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>📋 Adiba Photocopy</h3>
+                <p>Jl. Ciawitali No.51, Citeureup, Cimahi Utara</p>
+                <p>Jawa Barat 40512</p>
+                <p>Buka: Senin – Jumat: 08.00 – 20.00 | Sabtu: 08.00 – 18.00 | Minggu: Libur</p>
+                <div class="social-links">
+                    <a href="https://wa.me/6285191163819" target="_blank">📱 WhatsApp</a>
+                    <a href="tel:085191163819">📞 Telepon</a>
+                    <a href="https://maps.google.com?q=Jl.+Ciawitali+No.51+Cimahi" target="_blank">🗺️ Maps</a>
+                </div>
+                <p style="margin-top: 2rem; color: #95a5a6;">&copy; 2025 Adiba Photocopy. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Admin Page -->
+    <div id="adminPage" class="admin-page">
+        <header>
+            <nav>
+                <div class="logo">🔐 Admin Panel</div>
+                <ul class="nav-links">
+                    <li><a href="#" id="backBtn" class="admin-btn">← Kembali</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="admin-container">
+            <div class="dashboard-header">
+                <h1>Dashboard Admin</h1>
+                <p>Kelola bisnis Adiba Photocopy Anda</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <span class="stat-icon">📋</span>
+                        <div class="stat-label">Pesanan Hari Ini</div>
+                        <div class="stat-number">156</div>
+                        <div class="stat-change">↑ 12% dari kemarin</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <span class="stat-icon">✅</span>
+                        <div class="stat-label">Pesanan Selesai</div>
+                        <div class="stat-number">142</div>
+                        <div class="stat-change">91% completion</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <span class="stat-icon">⏳</span>
+                        <div class="stat-label">Sedang Diproses</div>
+                        <div class="stat-number">14</div>
+                        <div class="stat-change">Butuh perhatian</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <span class="stat-icon">💰</span>
+                        <div class="stat-label">Pendapatan Hari Ini</div>
+                        <div class="stat-number">Rp 2.5jt</div>
+                        <div class="stat-change">↑ 8% dari rata-rata</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">⚙️ Menu Administrasi</h2>
+                <div class="action-grid">
+                    <button class="action-btn" id="kelolaPesananBtn">
+                        <span class="action-icon">📦</span>
+                        <span class="action-text">Kelola Pesanan</span>
+                    </button>
+                    <button class="action-btn" id="kelolaProdukBtn">
+                        <span class="action-icon">📋</span>
+                        <span class="action-text">Kelola Produk</span>
+                    </button>
+                    <button class="action-btn" id="kelolaHargaBtn">
+                        <span class="action-icon">💵</span>
+                        <span class="action-text">Kelola Harga</span>
+                    </button>
+                    <button class="action-btn" id="laporanKeuanganBtn">
+                        <span class="action-icon">📊</span>
+                        <span class="action-text">Laporan Keuangan</span>
+                    </button>
+                    <button class="action-btn" id="kelolaStaffBtn">
+                        <span class="action-icon">👥</span>
+                        <span class="action-text">Kelola Staff</span>
+                    </button>
+                    <button class="action-btn" id="pengaturanBtn">
+                        <span class="action-icon">⚙️</span>
+                        <span class="action-text">Pengaturan</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">📊 Aktivitas Terbaru</h2>
+                <ul class="activity-list">
+                    <li class="activity-item">
+                        <div class="activity-text">
+                            <div class="activity-title">Pesanan baru dari Budi</div>
+                            <div class="activity-time">5 menit yang lalu</div>
+                        </div>
+                        <span class="activity-badge">Baru</span>
+                    </li>
+                    <li class="activity-item">
+                        <div class="activity-text">
+                            <div class="activity-title">Pesanan Siti telah selesai</div>
+                            <div class="activity-time">15 menit yang lalu</div>
+                        </div>
+                        <span class="activity-badge">Selesai</span>
+                    </li>
+                    <li class="activity-item">
+                        <div class="activity-text">
+                            <div class="activity-title">Stock kertas HVS berkurang</div>
+                            <div class="activity-time">1 jam yang lalu</div>
+                        </div>
+                        <span class="activity-badge">Perhatian</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Adiba Photocopy Admin. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="{{ asset('js/script.js') }}"></script>
+
+</body>
+</html>
