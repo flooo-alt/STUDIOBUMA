@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adiba Photocopy</title>
+    <title>Studio Bumi Matyam</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
@@ -13,7 +13,7 @@
         <!-- Header -->
         <header>
             <nav>
-                <div class="logo">Foto-copy</div>
+                <div class="logo">Bumi Maryam</div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Layanan & Produk</a></li>
@@ -23,17 +23,15 @@
             </nav>
         </header>
 
-
-
         <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="hero-content">
                 <h1>Selamat Datang</h1>
-                <h1>Di Adiba Photocopy</h1>
-                <p>Layanan Fotocopy & Cetak Terpercaya</p>
+                <h1>Di Studio BUMA</h1>
+                <p>Abadikan moment dengan sempurna</p>
                 <div class="hero-buttons">
                     <a href="#services" class="btn btn-primary">Lihat Layanan/Produk kami</a>
-                    <a href="https://wa.me/6285191163819" target="_blank" class="btn btn-secondary">Chat WhatsApp</a>
+                    <a href="https://www.whatsapp.com/channel/0029Vape3XAFHWq0f5AeNK16" target="_blank" class="btn btn-secondary">Channel WA Sahabat Bumi</a>
                 </div>
             </div>
             <div class="hero-bg"></div>
@@ -47,39 +45,50 @@
                 <!-- LAYANAN (KIRI) -->
                 <div class="section-box">
                     <div class="section-header">
-                        <h2>🛠️ Layanan Kami</h2>
-                        <p>Berbagai layanan profesional untuk kebutuhan Anda</p>
+                        <h2>📸 Photo Group</h2>
+                        <p>Setiap package hanya 5 orang</p>
+                        <p>Tambahan biaya 15k/orang</p>
                     </div>
 
                     <!-- Preview Cards -->
                     <div class="preview-cards">
                         <div class="card-compact">
                             <div class="icon">📋</div>
-                            <h3>Fotocopy Dokumen</h3>
-                            <span class="price-tag">Mulai Rp 100/lembar</span>
+                            <h3>Package Leaf</h3>
+                            <span class="price-tag">Rp 125K</span>
+                            <br></br>
+                            <p>25 Menit/Sesi</p>
+                            <p>1 Background & 1 Tema</p>
+                            <p>All File Original</p>
+                            <p>5 foto print UK 10R</p>
+                            <p>Maks 5 orang</p>
                         </div>
                         <div class="card-compact">
-                            <div class="icon">🖨️</div>
-                            <h3>Cetak Dokumen</h3>
-                            <span class="price-tag">Mulai Rp 300/lembar</span>
+                            <div class="icon">📋</div>
+                            <h3>Package Breeze</h3>
+                            <span class="price-tag">Rp 175K</span>
+                            <br></br>
+                            <p>45 Menit/Sesi</p>
+                            <p>2 Background & 2 Tema</p>
+                            <p>All File Original</p>
+                            <p>5 foto print UK 10R</p>
+                            <p>Maks 5 orang</p>
                         </div>
                         <div class="card-compact">
-                            <div class="icon">📚</div>
-                            <h3>Jilid & Laminating</h3>
-                            <span class="price-tag">Mulai Rp 5.000</span>
-                        </div>
+                            <div class="icon">📋</div>
+                            <h3>Package DAWN</h3>
+                            <span class="price-tag">Rp 225K</span>
+                            <br></br>
+                            <p>60 Menit/Sesi</p>
+                            <p>2 Background & 2 Tema</p>
+                            <p>All File Original</p>
+                            <p>5 foto print UK 10R</p>
+                            <p>Maks 5 orang</p>
+                        </div>>
                     </div>
 
                     <!-- Full Cards -->
                     <div class="full-cards" id="servicesFullCards">
-                        <div class="card-full">
-                            <div class="icon-large">📋</div>
-                            <h3>Fotocopy Dokumen</h3>
-                            <p>Fotocopy dokumen dengan kualitas terbaik, hasil jernih dan tajam</p>
-                            <div class="price">Mulai Rp 100/lembar</div>
-                            <button class="order-btn" data-service="Fotocopy Dokumen">💬 Pesan Sekarang</button>
-                        </div>
-
                         <div class="card-full">
                             <div class="icon-large">🖨️</div>
                             <h3>Cetak Dokumen</h3>
@@ -129,26 +138,42 @@
                 <!-- PRODUK (KANAN) -->
                 <div class="section-box">
                     <div class="section-header">
-                        <h2>📦 Produk Kami</h2>
-                        <p>Produk berkualitas untuk berbagai kebutuhan</p>
+                        <h2>📸 Photo Family</h2>
+                        <p>Setiap package hanya 3 orang</p>
+                        <p>Tambahan biaya 15k/orang</p>
                     </div>
 
                     <!-- Preview Cards -->
                     <div class="preview-cards">
                         <div class="card-compact">
-                            <div class="icon">📋</div>
-                            <h3>Kertas HVS A4</h3>
-                            <span class="price-tag">Rp 45.000/rim</span>
+                            <h3>Package Excited</h3>
+                            <span class="price-tag">Rp 125K</span>
+                            <br></br>
+                            <p>25 Menit/Sesi</p>
+                            <p>1 Background & 1 Tema</p>
+                            <p>All File Original</p>
+                            <p>3 foto edit</p>
+                            <p>1 foto print UK A4</p>
                         </div>
                         <div class="card-compact">
-                            <div class="icon">📔</div>
-                            <h3>Jilid Softcover</h3>
-                            <span class="price-tag">Rp 8.000</span>
+                            <h3>Package Delighted</h3>
+                            <span class="price-tag">Rp 175K</span>
+                            <br></br>
+                            <p>45 Menit/Sesi</p>
+                            <p>2 Background & 2 Tema</p>
+                            <p>All File Original</p>
+                            <p>5 foto edit</p>
+                            <p>1 foto print UK A4</p>
                         </div>
                         <div class="card-compact">
-                            <div class="icon">📕</div>
-                            <h3>Jilid Hardcover</h3>
-                            <span class="price-tag">Rp 25.000</span>
+                            <h3>Package Excited</h3>
+                            <span class="price-tag">Rp 225K</span>
+                            <br></br>
+                            <p>60 Menit/Sesi</p>
+                            <p>2 Background & 2 Tema</p>
+                            <p>All File Original</p>
+                            <p>7 foto edit</p>
+                            <p>1 foto print UK A4</p>
                         </div>
                     </div>
 
@@ -255,34 +280,32 @@
                     <div class="visit-card">
                         <h3>📌 Alamat</h3>
                         <p>
-                            Jl. Ciawitali No.51,<br>
-                            Citeureup, Cimahi Utara,<br>
-                            Jawa Barat 40512
+                            Jl. Andir No.15,<br>
+                            Cariang, Kec. Andir,<br>
+                            Bandung Wetan 40183
                         </p>
                     </div>
 
                     <div class="visit-card">
                         <h3>📞 Kontak</h3>
-                        <p><a href="tel:085191163819">0851-9116-3819</a></p>
+                        <p><a href="tel:08569003407">0856-9003-407</a></p>
                     </div>
 
                     <div class="visit-card">
                         <h3>⏰ Jam Operasional</h3>
                         <p>
-                            Senin – Jumat: 08.00 – 20.00<br>
-                            Sabtu: 08.00 – 18.00<br>
-                            Minggu: Libur
+                            Senin – Minggu: 07.00 – 21.00<br>
                         </p>
                     </div>
 
-                    <a href="https://maps.google.com?q=Jl.+Ciawitali+No.51+Cimahi" target="_blank" class="maps-btn">
+                    <a href="https://maps.app.goo.gl/4x39SkMkhizdzzFx7" target="_blank" class="maps-btn">
                         🗺️ Buka di Google Maps
                     </a>
                 </div>
 
                 <div class="visit-map">
                     <iframe
-                        src="https://www.google.com/maps?q=Jl.+Ciawitali+No.51+Cimahi&output=embed"
+                        src="https://maps.app.goo.gl/4x39SkMkhizdzzFx7"
                         loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
@@ -293,16 +316,15 @@
         <!-- Footer -->
         <footer>
             <div class="footer-content">
-                <h3>📋 Adiba Photocopy</h3>
-                <p>Jl. Ciawitali No.51, Citeureup, Cimahi Utara</p>
-                <p>Jawa Barat 40512</p>
-                <p>Buka: Senin – Jumat: 08.00 – 20.00 | Sabtu: 08.00 – 18.00 | Minggu: Libur</p>
+                <h3>📋 BUMA STUDIO</h3>
+                <p>Jl. Andir No.15, Cariang, Kec. Andir, Bandung Wetan 40183</p>
+                <p>Buka: Senin – Minggu: 07.00 – 21.00</p>
                 <div class="social-links">
-                    <a href="https://wa.me/6285191163819" target="_blank">📱 WhatsApp</a>
-                    <a href="tel:085191163819">📞 Telepon</a>
-                    <a href="https://maps.google.com?q=Jl.+Ciawitali+No.51+Cimahi" target="_blank">🗺️ Maps</a>
+                    <a href="https://wa.me/628569003407" target="_blank">📱 WhatsApp</a>
+                    <a href="tel:08569003407">📞 Telepon</a>
+                    <a href="https://maps.app.goo.gl/4x39SkMkhizdzzFx7" target="_blank">🗺️ Maps</a>
                 </div>
-                <p style="margin-top: 2rem; color: #95a5a6;">&copy; 2025 Adiba Photocopy. All rights reserved.</p>
+                <p style="margin-top: 2rem; color: #95a5a6;">&copy; 2026 BUMA STUDIO. All rights reserved.</p>
             </div>
         </footer>
     </div>
@@ -321,7 +343,7 @@
         <div class="admin-container">
             <div class="dashboard-header">
                 <h1>Dashboard Admin</h1>
-                <p>Kelola bisnis Adiba Photocopy Anda</p>
+                <p>Kelola daftar layanan BUMA</p>
             </div>
 
             <div class="stats-grid">
