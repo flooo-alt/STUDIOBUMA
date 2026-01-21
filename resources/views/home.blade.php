@@ -62,6 +62,7 @@
                             <p>All File Original</p>
                             <p>5 foto print UK 10R</p>
                             <p>Maks 5 orang</p>
+                            <button class="order-btn" data-service="Cetak Dokumen">💬 Pesan Sekarang</button>
                         </div>
                         <div class="card-compact">
                             <div class="icon">📋</div>
@@ -73,6 +74,7 @@
                             <p>All File Original</p>
                             <p>5 foto print UK 10R</p>
                             <p>Maks 5 orang</p>
+                            <button class="order-btn" data-service="Cetak Dokumen">💬 Pesan Sekarang</button>
                         </div>
                         <div class="card-compact">
                             <div class="icon">📋</div>
@@ -84,55 +86,9 @@
                             <p>All File Original</p>
                             <p>5 foto print UK 10R</p>
                             <p>Maks 5 orang</p>
+                            <button class="order-btn" data-service="Cetak Dokumen">💬 Pesan Sekarang</button>
                         </div>>
                     </div>
-
-                    <!-- Full Cards -->
-                    <div class="full-cards" id="servicesFullCards">
-                        <div class="card-full">
-                            <div class="icon-large">🖨️</div>
-                            <h3>Cetak Dokumen</h3>
-                            <p>Cetak dokumen hitam putih atau berwarna dengan hasil profesional</p>
-                            <div class="price">Mulai Rp 300/lembar</div>
-                            <button class="order-btn" data-service="Cetak Dokumen">💬 Pesan Sekarang</button>
-                        </div>
-
-                        <div class="card-full">
-                            <div class="icon-large">📚</div>
-                            <h3>Jilid & Laminating</h3>
-                            <p>Jilid spiral, hard cover, dan laminating untuk berbagai kebutuhan</p>
-                            <div class="price">Mulai Rp 5.000</div>
-                            <button class="order-btn" data-service="Jilid & Laminating">💬 Pesan Sekarang</button>
-                        </div>
-
-                        <div class="card-full">
-                            <div class="icon-large">🎨</div>
-                            <h3>Cetak Foto</h3>
-                            <p>Cetak foto berbagai ukuran dengan kualitas photo paper premium</p>
-                            <div class="price">Mulai Rp 2.000</div>
-                            <button class="order-btn" data-service="Cetak Foto">💬 Pesan Sekarang</button>
-                        </div>
-
-                        <div class="card-full">
-                            <div class="icon-large">📄</div>
-                            <h3>Scan Dokumen</h3>
-                            <p>Scan dokumen dengan resolusi tinggi, format PDF atau JPG</p>
-                            <div class="price">Mulai Rp 500/lembar</div>
-                            <button class="order-btn" data-service="Scan Dokumen">💬 Pesan Sekarang</button>
-                        </div>
-
-                        <div class="card-full">
-                            <div class="icon-large">🎯</div>
-                            <h3>Desain & Layout</h3>
-                            <p>Jasa desain untuk undangan, banner, dan kebutuhan lainnya</p>
-                            <div class="price">Mulai Rp 50.000</div>
-                            <button class="order-btn" data-service="Desain & Layout">💬 Pesan Sekarang</button>
-                        </div>
-                    </div>
-
-                    <button class="show-more-btn" id="servicesToggleBtn">
-                        <span id="servicesToggleText">📖 Lihat Semua Layanan</span>
-                    </button>
                 </div>
 
                 <!-- PRODUK (KANAN) -->
@@ -154,6 +110,7 @@
                             <p>All File Original</p>
                             <p>3 foto edit</p>
                             <p>1 foto print UK A4</p>
+                            <button class="order-btn" data-service="Cetak Dokumen">💬 Pesan Sekarang</button>
                         </div>
                         <div class="card-compact">
                             <h3>Package Delighted</h3>
@@ -164,6 +121,7 @@
                             <p>All File Original</p>
                             <p>5 foto edit</p>
                             <p>1 foto print UK A4</p>
+                            <button class="order-btn" data-service="Cetak Dokumen">💬 Pesan Sekarang</button>
                         </div>
                         <div class="card-compact">
                             <h3>Package Excited</h3>
@@ -174,99 +132,9 @@
                             <p>All File Original</p>
                             <p>7 foto edit</p>
                             <p>1 foto print UK A4</p>
+                            <button class="order-btn" data-service="Cetak Dokumen">💬 Pesan Sekarang</button>
                         </div>
                     </div>
-
-                    <!-- Full Cards -->
-                    <div class="full-cards" id="productsFullCards">
-                        <div class="card-full">
-                            <div class="icon-large">📋</div>
-                            <h3>Kertas HVS A4</h3>
-                            <p>Kertas berkualitas tinggi untuk kebutuhan cetak dan fotocopy Anda</p>
-                            <ul>
-                                <li>1 Rim (500 lembar)</li>
-                                <li>80 gram premium</li>
-                                <li>Hasil cetak tajam</li>
-                                <li>Tidak mudah kusut</li>
-                            </ul>
-                            <div class="price">Rp 45.000</div>
-                            <button class="order-btn" data-product="Kertas HVS A4 - Rp 45.000">🛒 Beli Sekarang</button>
-                        </div>
-
-                        <div class="card-full">
-                            <div class="icon-large">📔</div>
-                            <h3>Jilid Softcover</h3>
-                            <p>Jilid dokumen dengan cover plastik bening dan spiral berkualitas</p>
-                            <ul>
-                                <li>Cover plastik jernih</li>
-                                <li>Spiral kawat/plastik</li>
-                                <li>Rapi dan profesional</li>
-                                <li>Berbagai ukuran</li>
-                            </ul>
-                            <div class="price">Rp 8.000</div>
-                            <button class="order-btn" data-product="Jilid Softcover - Rp 8.000">🛒 Beli Sekarang</button>
-                        </div>
-
-                        <div class="card-full">
-                            <div class="icon-large">📕</div>
-                            <h3>Jilid Hardcover</h3>
-                            <p>Jilid premium dengan cover tebal untuk dokumen penting</p>
-                            <ul>
-                                <li>Cover karton tebal</li>
-                                <li>Tahan lama</li>
-                                <li>Tampilan eksklusif</li>
-                                <li>Pilihan warna beragam</li>
-                            </ul>
-                            <div class="price">Rp 25.000</div>
-                            <button class="order-btn" data-product="Jilid Hardcover - Rp 25.000">🛒 Beli Sekarang</button>
-                        </div>
-
-                        <div class="card-full">
-                            <div class="icon-large">🖼️</div>
-                            <h3>Laminating</h3>
-                            <p>Laminating dokumen untuk perlindungan maksimal</p>
-                            <ul>
-                                <li>Plastik tebal berkualitas</li>
-                                <li>Tahan air dan robek</li>
-                                <li>Hasil glossy/doff</li>
-                                <li>Ukuran A4/F4</li>
-                            </ul>
-                            <div class="price">Rp 3.000</div>
-                            <button class="order-btn" data-product="Laminating - Rp 3.000">🛒 Beli Sekarang</button>
-                        </div>
-
-                        <div class="card-full">
-                            <div class="icon-large">📸</div>
-                            <h3>Cetak Foto Premium</h3>
-                            <p>Cetak foto dengan kualitas photo paper profesional</p>
-                            <ul>
-                                <li>Ukuran 4R, 5R, A4</li>
-                                <li>Photo paper glossy</li>
-                                <li>Warna tajam & natural</li>
-                                <li>Tahan lama</li>
-                            </ul>
-                            <div class="price">Rp 2.500</div>
-                            <button class="order-btn" data-product="Cetak Foto Premium - Rp 2.500">🛒 Beli Sekarang</button>
-                        </div>
-
-                        <div class="card-full">
-                            <div class="icon-large">✏️</div>
-                            <h3>Alat Tulis Kantor</h3>
-                            <p>Berbagai kebutuhan alat tulis untuk kantor dan sekolah</p>
-                            <ul>
-                                <li>Pulpen, pensil, penghapus</li>
-                                <li>Staples, isi staples</li>
-                                <li>Correction pen</li>
-                                <li>Dan lain-lain</li>
-                            </ul>
-                            <div class="price">Bervariasi</div>
-                            <button class="order-btn" data-product="Alat Tulis Kantor">🛒 Lihat Katalog</button>
-                        </div>
-                    </div>
-
-                    <button class="show-more-btn" id="productsToggleBtn">
-                        <span id="productsToggleText">📖 Lihat Semua Produk</span>
-                    </button>
                 </div>
             </div>
         </section>
@@ -308,7 +176,7 @@
                         src="https://maps.app.goo.gl/4x39SkMkhizdzzFx7"
                         loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+                    </iframe>   
                 </div>
             </div>
         </section>

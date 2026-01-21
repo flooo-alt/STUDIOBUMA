@@ -5,9 +5,9 @@
 }
 
 :root {
-    --primary: #9e4a1e;
-    --primary-dark: #59654e;
-    --secondary: #b9a082;
+    --primary: #c08667;
+    --primary-dark: #341a;
+    --secondary: #a36b27;
     --dark: #fdf6e3;
     --darker: #fdf6e3;
     --light: #59654e;
@@ -24,13 +24,13 @@ body {
 
 /* Header */
 header {
-    background: #59654e;
+    background:#59654e;
     padding: 1.2rem 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 30px rgba(60, 221, 113, 0.3);
 }
 
 nav {
@@ -85,7 +85,7 @@ nav {
 }
 
 .admin-btn {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(173, 45, 45, 0.15);
     color: #fdf6e3;
     padding: 0.6rem 1.5rem;
     border: 2px solid #fdf6e3;
@@ -231,7 +231,7 @@ nav {
 /* Services & Products Section */
 .services-products-section {
     padding: 5rem 2rem;
-    background: #fdf6e3;
+    background: #f7eed6;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -350,94 +350,6 @@ nav {
     color: #fdf6e3;
 }
 
-/* Full Cards */
-.full-cards {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out;
-}
-
-.full-cards.expanded {
-    max-height: 5000px;
-}
-
-.card-full {
-    background: #f5f0e8;
-    border: 2px solid #b9a082;
-    border-radius: 15px;
-    padding: 2rem;
-    margin-bottom: 1.5rem;
-    animation: slideIn 0.4s ease-out;
-    transition: all 0.3s ease;
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.card-full:hover {
-    border-color: #9e4a1e;
-    box-shadow: 0 15px 40px rgba(158, 74, 30, 0.2);
-}
-
-.card-full .icon-large {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    display: block;
-}
-
-.card-full h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #59654e;
-    font-weight: 700;
-}
-
-.card-full p {
-    color: var(--text-muted);
-    line-height: 1.6;
-    margin-bottom: 1.2rem;
-    font-size: 0.95rem;
-}
-
-.card-full .price {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #9e4a1e;
-    margin-bottom: 1.5rem;
-}
-
-.card-full ul {
-    list-style: none;
-    margin-bottom: 1.5rem;
-}
-
-.card-full ul li {
-    padding: 0.5rem 0;
-    color: #59654e;
-    font-size: 0.95rem;
-    transition: all 0.3s ease;
-}
-
-.card-full ul li::before {
-    content: '✓ ';
-    color: #9e4a1e;
-    font-weight: bold;
-    margin-right: 0.8rem;
-}
-
-.card-full ul li:hover {
-    color: #59654e;
-    transform: translateX(5px);
-}
-
 .order-btn {
     background: #9e4a1e;
     color: #fdf6e3;
@@ -460,6 +372,10 @@ nav {
     transform: translateY(-1px);
 }
 
+.order-btn:active {
+    transform: translateY(-1px);
+};
+    
 .show-more-btn {
     background: #9e4a1e;
     color: #fdf6e3;
@@ -473,6 +389,7 @@ nav {
     transition: all 0.3s ease;
     box-shadow: 0 5px 20px rgba(158, 74, 30, 0.3);
 }
+
 
 .show-more-btn:hover {
     transform: translateY(-3px);
@@ -491,7 +408,7 @@ nav {
     text-align: center;
     font-size: 2.8rem;
     margin-bottom: 3rem;
-    color: white;
+    color: lab(26.63% -12.57 6.98);
     font-weight: 700;
 }
 
@@ -508,34 +425,34 @@ nav {
 }
 
 .visit-card {
-    background: linear-gradient(135deg, #2a2d3e 0%, #1a1d2e 100%);
+    background: linear-gradient(135deg, rgba(17, 20, 11, 0.667) 0%, #341a 100%);
     padding: 2rem;
     border-radius: 15px;
     border-left: 4px solid var(--secondary);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 30px rgba(33, 201, 123, 0.3);
     transition: all 0.3s ease;
 }
 
 .visit-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
+    box-shadow: 0 15px 40px rgba(36, 105, 57, 0.2);
 }
 
 .visit-card h3 {
-    color: var(--secondary);
+    color: #18191d;
     margin-bottom: 0.8rem;
     font-size: 1.2rem;
     font-weight: 700;
 }
 
 .visit-card p {
-    color: var(--text-muted);
+    color: #f5f0e8;
     line-height: 1.8;
     font-size: 0.95rem;
 }
 
 .visit-card a {
-    color: var(--primary);
+    color: #f7eed6;
     text-decoration: none;
     transition: all 0.3s ease;
 }
@@ -547,7 +464,7 @@ nav {
 .maps-btn {
     margin-top: 1rem;
     width: fit-content;
-    background: linear-gradient(135deg, var(--secondary) 0%, #f5a800 100%);
+    background: linear-gradient(135deg, var(--secondary) 0%, #9e4a1e 100%);
     color: var(--darker);
     padding: 0.9rem 2rem;
     border-radius: 30px;
@@ -555,18 +472,18 @@ nav {
     text-decoration: none;
     transition: all 0.3s ease;
     display: inline-block;
-    box-shadow: 0 5px 20px rgba(245, 179, 1, 0.3);
+    box-shadow: 0 5px 20px #b4c046(245, 179, 1, 0.3);
 }
 
 .maps-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 30px rgba(245, 179, 1, 0.5);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
 }
 
 .visit-map {
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 20px 60px rgba(230, 214, 0, 0.3);
 }
 
 .visit-map iframe {
@@ -578,11 +495,11 @@ nav {
 
 /* Footer */
 footer {
-    background: linear-gradient(135deg, #0f1117 0%, #1a1d2e 100%);
-    color: var(--light);
+    background: linear-gradient(135deg, #203829 0%, #59654e 100%);
+    color: #f2f3fa;
     padding: 3rem 2rem;
     text-align: center;
-    border-top: 1px solid rgba(102, 126, 234, 0.2);
+    border-top: 1px solid #161a13(102, 126, 234, 0.2);
 }
 
 .footer-content h3 {
@@ -592,7 +509,7 @@ footer {
 }
 
 .footer-content p {
-    color: var(--text-muted);
+    color: #f2f3fa;
     margin: 0.5rem 0;
     font-size: 0.95rem;
 }
@@ -606,7 +523,7 @@ footer {
 }
 
 .social-links a {
-    color: var(--light);
+    color: #f5f0e8;
     text-decoration: none;
     transition: all 0.3s ease;
     display: inline-block;
@@ -614,7 +531,7 @@ footer {
 }
 
 .social-links a:hover {
-    color: var(--secondary);
+    color: #0c0d0f;
     transform: translateY(-3px);
 }
 
@@ -695,7 +612,7 @@ footer {
     right: -50%;
     width: 200px;
     height: 200px;
-    background: radial-gradient(circle, #9e4a1e(102, 126, 234, 0.1), transparent);
+    background: radial-gradient(circle, #000000(102, 126, 234, 0.1), transparent);
     border-radius: 50%;
 }
 
