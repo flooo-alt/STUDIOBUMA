@@ -47,7 +47,7 @@ document.querySelectorAll('.order-btn').forEach(button => {
         const service = this.getAttribute('data-service');
         const product = this.getAttribute('data-product');
 
-        const phoneNumber = '6285191163819';
+        const phoneNumber = '628569003407';
         let message = '';
 
         if (service) {
@@ -143,7 +143,7 @@ function unlockScroll() {
 
 // Create WhatsApp Floating Button
 function createWhatsAppButton() {
-    const phoneNumber = '6285191163819';
+    const phoneNumber = '628569003407';
     const whatsappLink = `https://wa.me/${phoneNumber}`;
     
     const whatsappButton = document.createElement('a');

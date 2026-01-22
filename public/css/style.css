@@ -284,6 +284,82 @@ nav {
     font-size: 0.95rem;
 }
 
+.cta-section {
+    background: #fdf6e3;
+    padding: 80px 60px;
+}
+
+.cta-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+/* KIRI */
+.cta-left h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #59654e;
+    margin-bottom: 40px;
+}
+
+.image-grid-left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.image-grid-left img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* KANAN */
+.cta-right p {
+    color: #59654e;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    max-width: 420px;
+}
+
+.cta-btn {
+    display: inline-block;
+    background: #59654e;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 35px;
+}
+
+.image-grid-right {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+
+.image-grid-right img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .cta-container {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-left h1 {
+        font-size: 38px;
+    }
+}
+
+
 /* Cards */
 .preview-cards {
     display: flex;
@@ -439,7 +515,7 @@ nav {
 }
 
 .visit-card h3 {
-    color: #18191d;
+    color: #f7eed6;
     margin-bottom: 0.8rem;
     font-size: 1.2rem;
     font-weight: 700;

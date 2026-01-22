@@ -18,7 +18,7 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Layanan & Produk</a></li>
                     <li><a href="#visit">Lokasi</a></li>
-                    <li><a href="#" class="admin-btn" id="adminBtn"> Admin</a></li>
+                    <li><a href="#adminPage" class="admin-btn" id="adminBtn"> Admin</a></li>
                 </ul>
             </nav>
         </header>
@@ -53,19 +53,17 @@
                     <!-- Preview Cards -->
                     <div class="preview-cards">
                         <div class="card-compact">
-                            <div class="icon">📋</div>
                             <h3>Package Leaf</h3>
                             <span class="price-tag">Rp 125K</span>
                             <br></br>
                             <p>25 Menit/Sesi</p>
                             <p>1 Background & 1 Tema</p>
                             <p>All File Original</p>
-                            <p>5 foto print UK 10R</p>
+                            <p>3 foto print UK 10R</p>
                             <p>Maks 5 orang</p>
-                            <button class="order-btn" data-service="Cetak Dokumen">💬 Pesan Sekarang</button>
                         </div>
+
                         <div class="card-compact">
-                            <div class="icon">📋</div>
                             <h3>Package Breeze</h3>
                             <span class="price-tag">Rp 175K</span>
                             <br></br>
@@ -74,10 +72,8 @@
                             <p>All File Original</p>
                             <p>5 foto print UK 10R</p>
                             <p>Maks 5 orang</p>
-                            <button class="order-btn" data-service="Cetak Dokumen">💬 Pesan Sekarang</button>
                         </div>
                         <div class="card-compact">
-                            <div class="icon">📋</div>
                             <h3>Package DAWN</h3>
                             <span class="price-tag">Rp 225K</span>
                             <br></br>
@@ -86,10 +82,9 @@
                             <p>All File Original</p>
                             <p>5 foto print UK 10R</p>
                             <p>Maks 5 orang</p>
-                            <button class="order-btn" data-service="Cetak Dokumen">💬 Pesan Sekarang</button>
-                        </div>>
+                            </div>>
+                        </div>
                     </div>
-                </div>
 
                 <!-- PRODUK (KANAN) -->
                 <div class="section-box">
@@ -110,7 +105,6 @@
                             <p>All File Original</p>
                             <p>3 foto edit</p>
                             <p>1 foto print UK A4</p>
-                            <button class="order-btn" data-service="Cetak Dokumen">💬 Pesan Sekarang</button>
                         </div>
                         <div class="card-compact">
                             <h3>Package Delighted</h3>
@@ -121,7 +115,6 @@
                             <p>All File Original</p>
                             <p>5 foto edit</p>
                             <p>1 foto print UK A4</p>
-                            <button class="order-btn" data-service="Cetak Dokumen">💬 Pesan Sekarang</button>
                         </div>
                         <div class="card-compact">
                             <h3>Package Excited</h3>
@@ -131,13 +124,46 @@
                             <p>2 Background & 2 Tema</p>
                             <p>All File Original</p>
                             <p>7 foto edit</p>
-                            <p>1 foto print UK A4</p>
-                            <button class="order-btn" data-service="Cetak Dokumen">💬 Pesan Sekarang</button>
-                        </div>
+                            <p>1 foto print UK A4</p>                       </div>
                     </div>
                 </div>
             </div>
         </section>
+       <section class="cta-section">
+    <div class="cta-container">
+
+        <!-- KIRI -->
+        <div class="cta-left">
+            <h1>What are you<br>Waiting for?</h1>
+<br>
+<br>
+<br>
+            <div class="image-grid-left">
+                <img src="image/GPA.jpeg" alt="">
+                <img src="image/FMA.jpeg" alt="">
+            </div>
+        </div>
+
+        <!-- KANAN -->
+        <div class="cta-right">
+            <p>
+                Mengabadikan momen lewat foto adalah cara sederhana untuk
+                menyimpan rasa, cerita, dan kebahagiaan yang tak terulang.
+                Karena momen berlalu cepat, tapi foto membuatnya tinggal
+                lebih lama di hati.
+            </p>
+
+            <a href="#" class="cta-btn">BOOK NOW</a>
+<br>
+<br>
+            <div class="image-grid-right">
+                <img src="image/FMB.jpeg" alt="">
+            </div>
+        </div>
+
+    </div>
+</section>
+ 
 
         <!-- Visit Section -->
         <section id="visit" class="visit-section">
@@ -173,7 +199,7 @@
 
                 <div class="visit-map">
                     <iframe
-                        src="https://maps.app.goo.gl/4x39SkMkhizdzzFx7"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3147.5486532991467!2d107.58498668342962!3d-6.917499818810736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7f842889af1%3A0xd54200906144425e!2sBumi%20Maryam!5e1!3m2!1sid!2sid!4v1769037957111!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
                         loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>   
