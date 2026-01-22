@@ -74,7 +74,7 @@
                             <p>Maks 5 orang</p>
                         </div>
                         <div class="card-compact">
-                            <h3>Package DAWN</h3>
+                            <h3>Package Dawn</h3>
                             <span class="price-tag">Rp 225K</span>
                             <br></br>
                             <p>60 Menit/Sesi</p>
@@ -117,14 +117,15 @@
                             <p>1 foto print UK A4</p>
                         </div>
                         <div class="card-compact">
-                            <h3>Package Excited</h3>
+                            <h3>Package Enthusiastic</h3>
                             <span class="price-tag">Rp 225K</span>
                             <br></br>
                             <p>60 Menit/Sesi</p>
                             <p>2 Background & 2 Tema</p>
                             <p>All File Original</p>
                             <p>7 foto edit</p>
-                            <p>1 foto print UK A4</p>                       </div>
+                            <p>1 foto print UK A4</p>                       
+                        </div>
                     </div>
                 </div>
             </div>
@@ -153,7 +154,7 @@
                 lebih lama di hati.
             </p>
 
-            <a href="#" class="cta-btn">BOOK NOW</a>
+            <a href="{{url('Booking')}}" class="cta-btn">BOOK NOW</a>
 <br>
 <br>
             <div class="image-grid-right">
