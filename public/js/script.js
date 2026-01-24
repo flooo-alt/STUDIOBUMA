@@ -1,4 +1,4 @@
- // Navigation between Main Page and Admin Page
+// Navigation between Main Page and Admin Page
 document.getElementById('adminBtn').addEventListener('click', function(e) {
     e.preventDefault();
     document.getElementById('mainPage').style.display = 'none';
@@ -17,50 +17,12 @@ document.getElementById('backBtn').addEventListener('click', function(e) {
 document.getElementById('servicesToggleBtn').addEventListener('click', function() {
     const fullCards = document.getElementById('servicesFullCards');
     const toggleText = document.getElementById('servicesToggleText');
-
-    if (fullCards.classList.contains('expanded')) {
-        fullCards.classList.remove('expanded');
-        toggleText.textContent = '📖 Lihat Semua Layanan';
-    } else {
-        fullCards.classList.add('expanded');
-        toggleText.textContent = '📖 Sembunyikan Layanan';
-    }
 });
 
 // Toggle Products Full Cards
 document.getElementById('productsToggleBtn').addEventListener('click', function() {
     const fullCards = document.getElementById('productsFullCards');
     const toggleText = document.getElementById('productsToggleText');
-
-    if (fullCards.classList.contains('expanded')) {
-        fullCards.classList.remove('expanded');
-        toggleText.textContent = '📖 Lihat Semua Produk';
-    } else {
-        fullCards.classList.add('expanded');
-        toggleText.textContent = '📖 Sembunyikan Produk';
-    }
-});
-
-// Order Button Functionality
-document.querySelectorAll('.order-btn').forEach(button => {
-    button.addEventListener('click', function() {
-        const service = this.getAttribute('data-service');
-        const product = this.getAttribute('data-product');
-
-        const phoneNumber = '628569003407';
-        let message = '';
-
-        if (service) {
-            message = `Halo, saya tertarik dengan layanan *${service}*. Mohon informasi lebih lanjut.`;
-        } else if (product) {
-            message = `Halo, saya ingin memesan:\n\n*${product}*\n\nMohon informasi lebih lanjut.`;
-        }
-
-        if (message) {
-            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-            window.open(url, '_blank');
-        }
-    });
 });
 
 // Smooth Scrolling for Navigation Links
@@ -79,6 +41,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
 
 // Admin Button Functions
 document.getElementById('kelolaPesananBtn').addEventListener('click', function() {
@@ -161,4 +124,11 @@ function createWhatsAppButton() {
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Adiba Photocopy website loaded successfully');
     createWhatsAppButton();
+
+    //form
+        document.querySelector("form").addEventListener("submit", function(){
+            alert("Apakah data sudah sesuai?");
+        });
+ 
+
 });

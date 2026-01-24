@@ -335,7 +335,7 @@
         </div>
 
         <footer>
-            <p>&copy; 2025 Adiba Photocopy Admin. All rights reserved.</p>
+            <p>&copy; 2026 BUMA STUDIO. All rights reserved.</p>
         </footer>
     </div>
 

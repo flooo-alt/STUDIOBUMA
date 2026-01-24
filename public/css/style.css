@@ -1,13 +1,13 @@
-* {
-    margin: 0;
-    padding: 0;
+* { 
+     margin: 0; 
+    padding: 0; 
     box-sizing: border-box;
-}
-
+ }  
+ 
 :root {
     --primary: #c08667;
     --primary-dark: #341a;
-    --secondary: #a36b27;
+    --secondary: #3b6627;
     --dark: #fdf6e3;
     --darker: #fdf6e3;
     --light: #59654e;
@@ -24,7 +24,7 @@ body {
 
 /* Header */
 header {
-    background:#59654e;
+    background:#59654e;;
     padding: 1.2rem 0;
     position: fixed;
     width: 100%;
@@ -56,13 +56,13 @@ nav {
 
 .nav-links {
     display: flex;
-    gap: 2.5rem;
+    gap: 1.5rem;
     list-style: none;
     align-items: center;
 }
 
 .nav-links a {
-    color: #fdf6e3;
+    color: #f8f0f0;
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -75,7 +75,7 @@ nav {
     bottom: -5px;
     left: 0;
     width: 0;
-    height: 2px;
+    height: 5px;
     background: var(--secondary);
     transition: width 0.3s ease;
 }
@@ -85,7 +85,7 @@ nav {
 }
 
 .admin-btn {
-    background: rgba(173, 45, 45, 0.15);
+    background: rgba(245, 229, 229, 0.15);
     color: #fdf6e3;
     padding: 0.6rem 1.5rem;
     border: 2px solid #fdf6e3;
@@ -103,7 +103,7 @@ nav {
     transform: scale(1.05);
 }
 
-/* Hero Section */
+/* Hero Section/ bg atas*/
 .hero {
     margin-top: 70px;
     min-height: 100vh;
@@ -119,7 +119,7 @@ nav {
     position: absolute;
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(158, 74, 30, 0.08), transparent);
+    background: radial-gradient(circle,  rgba(158, 74, 30, 0.08), transparent);
     border-radius: 50%;
     top: -100px;
     right: -100px;
@@ -160,12 +160,44 @@ nav {
 
 .hero-buttons {
     display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: row;      /* Pastikan arahnya ke samping */
+    justify-content: center;  /* Supaya tombol ada di tengah */
+    align-items: center;      /* Supaya tinggi tombol sejajar */
+    gap: 2rem;              /* Jarak antar tombol */
+    margin-top: 2rem;
+    flex-wrap: nowrap;        /* Paksa jangan turun ke bawah kecuali layar HP */
 }
 
+/* Input nya untuk apa kalau gada input teks dll  nya di hero section? 
+/* FIX INPUT HERO - PAKSA WARNA TEKS 
+
+.hero input,
+.hero textarea {
+    background-color: #ffffff;
+    color: #59654e !important;
+    -webkit-text-fill-color: #59654e !important;
+    font-size: 16px;
+}
+
+
+.hero input:focus,
+.hero textarea:focus {
+    color: #59654e !important;
+    -webkit-text-fill-color: #59654e !important;
+    outline: none;
+}
+
+
+.hero input::placeholder,
+.hero textarea::placeholder {
+    color: #b9a082;
+    opacity: 1;
+}*/
+
+
 .btn {
+    display: inline-block; 
+    width: auto;           
     padding: 1rem 2.5rem;
     border-radius: 50px;
     text-decoration: none;
@@ -174,48 +206,38 @@ nav {
     border: none;
     cursor: pointer;
     font-size: 1rem;
+    white-space: nowrap;   /* Supaya teks tombol tidak turun ke bawah */
 }
 
-.btn-primary {
-    background: #9e4a1e;
-    color: #fdf6e3;
+.hero .btn-primary {
+    background: #fff ;
+    color: #000;
     box-shadow: 0 10px 30px rgba(158, 74, 30, 0.3);
+    border: 2px solid #b9a082;
+
 }
 
-.btn-primary:hover {
+.hero .btn-primary:hover {
     transform: translateY(-3px);
     box-shadow: 0 15px 40px rgba(158, 74, 30, 0.5);
+    background: #59654e;
+    color: #fff;
 }
 
-.btn-secondary {
-    background: transparent;
-    color: #b9a082;
+.hero .btn-secondary {
+    background: #faf5f5;
+    color: #000;
     border: 2px solid #b9a082;
+    box-shadow: 0 10px 30px rgba(158, 74, 30, 0.5);
+
 }
 
-.btn-secondary:hover {
-    background: #b9a082;
-    color: #fdf6e3;
-}
+.hero .btn-secondary:hover {
+    transform: translateY(-3px);
+    background: #59654e;
+    color: #fff;
+    box-shadow: 0 15px 40px rgba(158, 74, 30, 0.5);
 
-/* WhatsApp Float Button */
-.whatsapp-float {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.8rem;
-    text-decoration: none;
-    z-index: 999;
-    box-shadow: 0 5px 30px rgba(37, 211, 102, 0.4);
-    animation: slideInRight 0.6s ease;
-    transition: all 0.3s ease;
 }
 
 @keyframes slideInRight {
@@ -228,7 +250,7 @@ nav {
     box-shadow: 0 8px 40px rgba(37, 211, 102, 0.6);
 }
 
-/* Services & Products Section */
+/* Services & Products Section/ bg layanan */
 .services-products-section {
     padding: 5rem 2rem;
     background: #f7eed6;
@@ -256,7 +278,7 @@ nav {
     border-radius: 20px;
     padding: 2.5rem;
     border: 2px solid #b9a082;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 20px rgba(8, 3, 3, 0.08);
     transition: all 0.3s ease;
 }
 
@@ -611,6 +633,109 @@ footer {
     transform: translateY(-3px);
 }
 
+/* Container Form */
+.card-form {
+    max-width: 850px;
+    margin: 0 auto;
+    background: #59654e; /* Hijau Sage Tua (Lebih Elegan) */
+    padding: 50px;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-light-green {
+    color: #c9d6bc;
+}
+
+/* Label */
+.form-label {
+    font-weight: 600;
+    color: #fdf6e3;
+    margin-bottom: 8px;
+    margin-left: 10px;
+}
+
+/* Input & Select */
+.custom-input {
+    border-radius: 15px !important;
+    padding: 12px 20px !important;
+    border: 2px solid transparent !important;
+    background-color: #ffffff !important;
+    transition: all 0.3s ease;
+}
+
+.custom-input:focus {
+    border-color: #9e4a1e !important; /* Warna Terracotta saat fokus */
+    box-shadow: 0 0 15px rgba(158, 74, 30, 0.2) !important;
+    transform: translateY(-2px);
+}
+
+/* Tombol Submit */
+.btn-submit {
+    background-color: #91b981; /* Warna Terracotta (Biar kontras sama background hijau) */
+    color: white !important;
+    padding: 15px;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(158, 74, 30, 0.3);
+}
+
+.btn-submit:hover {
+    background-color: #adb969;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(158, 74, 30, 0.4);
+    color: white !important;
+}
+
+/* Tombol Kembali */
+.btn-back-modern {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #59654e; /* Warna hijau sage tua sesuai tema lu */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background-color: rgba(89, 101, 78, 0.05); /* Background sangat tipis */
+}
+
+.btn-back-modern svg {
+    transition: transform 0.3s ease;
+}
+
+/* Efek saat di-hover */
+.btn-back-modern:hover {
+    color: #9e4a1e; /* Berubah jadi terracotta saat hover */
+    background-color: rgba(158, 74, 30, 0.1); /* Background tipis terracotta */
+    transform: translateX(-5px); /* Geser dikit ke kiri */
+}
+
+.btn-back-modern:hover svg {
+    transform: scale(1.2); /* Icon arrow membesar dikit */
+}
+
+/* Hilangkan Spinner Input Number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Responsif Mobile */
+@media (max-width: 768px) {
+    .card-form {
+        padding: 30px 20px;
+        border-radius: 30px;
+    }
+}
+
+
 /* Admin Page */
 .admin-page {
     display: none;
@@ -636,13 +761,13 @@ footer {
 
 .dashboard-header h1 {
     font-size: 2.8rem;
-    color: white;
+    color: #59654e;
     margin-bottom: 0.5rem;
     font-weight: 800;
 }
 
-.dashboard-header p {
-    color: var(--text-muted);
+.dashboard-header h3 {
+     color:  #59654e;
     font-size: 1rem;
 }
 
@@ -721,7 +846,7 @@ footer {
 .stat-number {
     font-size: 2.2rem;
     font-weight: 800;
-    color: white;
+    color: #59654e;
     margin-bottom: 0.5rem;
 }
 
@@ -737,16 +862,16 @@ footer {
 }
 
 .section-title {
-    font-size: 1.8rem;
-    color: white;
+     font-size: 1.8rem;
+    color: #59654e;
     margin-bottom: 2rem;
     padding-bottom: 1rem;
-    border-bottom: 2px solid rgba(102, 126, 234, 0.3);
+    border-bottom: 2px solid #59654e(102, 126, 234, 0.3);
     display: flex;
     align-items: center;
     gap: 0.7rem;
     font-weight: 700;
-}
+}    
 
 /* Action Grid */
 .action-grid {
@@ -765,7 +890,7 @@ footer {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 10px 30px #59654e(102, 126, 234, 0.3);
     position: relative;
     overflow: hidden;
     display: flex;
@@ -788,7 +913,7 @@ footer {
 
 .action-btn:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
+    box-shadow: 0 15px 40px #59654e(102, 126, 234, 0.5);
 }
 
 .action-btn:hover::before {
@@ -813,7 +938,7 @@ footer {
 }
 
 .activity-item {
-    background: linear-gradient(135deg, #2a2d3e 0%, #1a1d2e 100%);
+    background: linear-gradient(135deg,#375237 0%, #59654e 100%);
     border-left: 4px solid var(--primary);
     padding: 1.5rem;
     margin-bottom: 1rem;
@@ -827,7 +952,7 @@ footer {
 .activity-item:hover {
     border-left-color: var(--secondary);
     transform: translateX(5px);
-    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+    box-shadow: 0 10px 30px #59654e(102, 126, 234, 0.2);
 }
 
 .activity-text {
@@ -967,4 +1092,5 @@ footer {
     .action-grid {
         grid-template-columns: 1fr;
     }
+
 }
