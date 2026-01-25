@@ -23,6 +23,24 @@
         </a>
     </div>
 
+    @if(session('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert" style="background-color: #d4edda; border: 1px solid #28a745; color: #155724; border-radius: 8px; padding: 15px; margin-bottom: 20px;">
+            <strong>✓ Berhasil!</strong> {{ session('success') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
+
+    @if($errors->any())
+        <div class="alert alert-danger alert-dismissible fade show" role="alert" style="background-color: #f8d7da; border: 1px solid #B22222; color: #721c24; border-radius: 8px; padding: 15px; margin-bottom: 20px;">
+            <strong>✗ Terjadi Kesalahan!</strong>
+            <ul style="margin: 10px 0 0 20px;">
+                @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
 
         <div class="card-form shadow-lg">
             <div class="text-center mb-5">

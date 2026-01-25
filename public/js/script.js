@@ -2,14 +2,14 @@
 document.getElementById('adminBtn').addEventListener('click', function(e) {
     e.preventDefault();
     document.getElementById('mainPage').style.display = 'none';
-    document.getElementById('adminPage').classList.add('active');
+    document.getElementById('login').classList.add('active');
     window.scrollTo(0, 0);
 });
 
 document.getElementById('backBtn').addEventListener('click', function(e) {
     e.preventDefault();
     document.getElementById('mainPage').style.display = 'block';
-    document.getElementById('adminPage').classList.remove('active');
+    document.getElementById('login').classList.remove('active');
     window.scrollTo(0, 0);
 });
 

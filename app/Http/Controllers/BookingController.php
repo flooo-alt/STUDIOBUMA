@@ -1,5 +1,8 @@
 <?php
-use App\Models\StudioGrup;
+
+namespace App\Http\Controllers;
+
+use App\Models\Booking;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -13,26 +16,27 @@ class BookingController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'no_whatsapp' => 'required',
-            'booking_type' => 'required',
-            'package' => 'required',
-            'person' => 'required|integer',
-            'tanggal' => 'required|date',
-            'jam' => 'required'
+            'nama' => 'required|string',
+            'nowa' => 'required|string',
+            'booking_type' => 'required|in:grup,family',
+            'paket' => 'required|string',
+            'jumlah_orang' => 'required|integer|min:1',
+            'tanggal_pelayanan' => 'required|date|after_or_equal:today',
+            'jam_pelayanan' => 'required|date_format:H:i'
         ]);
 
-        StudioGrup::create([
-            'booking_code' => 'BOOK-' . strtoupper(Str::random(6)),
-            'name' => $request->name,
-            'no_whatsapp' => $request->no_whatsapp,
-            'package' => $request->package,
-            'person' => $request->person,
-            'tanggal' => $request->tanggal,
-            'jam' => $request->jam,
-            'status' => 'Booked'
+        Booking::create([
+            'nama' => $request->nama,
+            'nowa' => $request->nowa,
+            'booking_type' => $request->booking_type,
+            'paket' => $request->paket,
+            'jumlah_orang' => $request->jumlah_orang,
+            'tanggal_pelayanan' => $request->tanggal_pelayanan,
+            'jam_pelayanan' => $request->jam_pelayanan,
+            'status' => 'pending'
         ]);
 
-        return redirect('/booking')->with('success','Booking berhasil!');
+        return redirect('/Booking')->with('success', 'Booking berhasil! Tunggu konfirmasi dari admin.');
     }
 }
+

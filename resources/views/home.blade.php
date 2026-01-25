@@ -18,7 +18,7 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Layanan & Produk</a></li>
                     <li><a href="#visit">Lokasi</a></li>
-                    <li><a href="#adminPage" class="admin-btn" id="adminBtn"> Admin</a></li>
+                    <li><a href="{{ route('login') }}" class="admin-btn" id="login">🔐 Log in</a></li>
                 </ul>
             </nav>
         </header>
@@ -224,115 +224,7 @@
         </footer>
     </div>
 
-    <!-- Admin Page -->
-    <div id="adminPage" class="admin-page">
-        <header>
-            <nav>
-                <div class="logo">🔐 Admin Panel</div>
-                <ul class="nav-links">
-                    <li><a href="#" id="backBtn" class="admin-btn">← Kembali</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <div class="admin-container">
-            <div class="dashboard-header">
-                <h1>Dashboard Admin</h1>
-                <p>Kelola daftar layanan BUMA</p>
-            </div>
-
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-content">
-                        <span class="stat-icon">📋</span>
-                        <div class="stat-label">Pesanan Hari Ini</div>
-                        <div class="stat-number">156</div>
-                        <div class="stat-change">↑ 12% dari kemarin</div>
-                    </div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-content">
-                        <span class="stat-icon">✅</span>
-                        <div class="stat-label">Pesanan Selesai</div>
-                        <div class="stat-number">142</div>
-                        <div class="stat-change">91% completion</div>
-                    </div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-content">
-                        <span class="stat-icon">⏳</span>
-                        <div class="stat-label">Sedang Diproses</div>
-                        <div class="stat-number">14</div>
-                        <div class="stat-change">Butuh perhatian</div>
-                    </div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-content">
-                        <span class="stat-icon">💰</span>
-                        <div class="stat-label">Pendapatan Hari Ini</div>
-                        <div class="stat-number">Rp 2.5jt</div>
-                        <div class="stat-change">↑ 8% dari rata-rata</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section">
-                <h2 class="section-title">⚙️ Menu Administrasi</h2>
-                <div class="action-grid">
-                    <button class="action-btn" id="kelolaPesananBtn">
-                        <span class="action-icon">📦</span>
-                        <span class="action-text">Kelola Pesanan</span>
-                    </button>
-                    <button class="action-btn" id="kelolaProdukBtn">
-                        <span class="action-icon">📋</span>
-                        <span class="action-text">Kelola Produk</span>
-                    </button>
-                    <button class="action-btn" id="kelolaHargaBtn">
-                        <span class="action-icon">💵</span>
-                        <span class="action-text">Kelola Harga</span>
-                    </button>
-                    <button class="action-btn" id="laporanKeuanganBtn">
-                        <span class="action-icon">📊</span>
-                        <span class="action-text">Laporan Keuangan</span>
-                    </button>
-                    <button class="action-btn" id="kelolaStaffBtn">
-                        <span class="action-icon">👥</span>
-                        <span class="action-text">Kelola Staff</span>
-                    </button>
-                    <button class="action-btn" id="pengaturanBtn">
-                        <span class="action-icon">⚙️</span>
-                        <span class="action-text">Pengaturan</span>
-                    </button>
-                </div>
-            </div>
-
-            <div class="section">
-                <h2 class="section-title">📊 Aktivitas Terbaru</h2>
-                <ul class="activity-list">
-                    <li class="activity-item">
-                        <div class="activity-text">
-                            <div class="activity-title">Pesanan baru dari Budi</div>
-                            <div class="activity-time">5 menit yang lalu</div>
-                        </div>
-                        <span class="activity-badge">Baru</span>
-                    </li>
-                    <li class="activity-item">
-                        <div class="activity-text">
-                            <div class="activity-title">Pesanan Siti telah selesai</div>
-                            <div class="activity-time">15 menit yang lalu</div>
-                        </div>
-                        <span class="activity-badge">Selesai</span>
-                    </li>
-                    <li class="activity-item">
-                        <div class="activity-text">
-                            <div class="activity-title">Stock kertas HVS berkurang</div>
-                            <div class="activity-time">1 jam yang lalu</div>
-                        </div>
-                        <span class="activity-badge">Perhatian</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
+   
 
         <footer>
             <p>&copy; 2026 BUMA STUDIO. All rights reserved.</p>
