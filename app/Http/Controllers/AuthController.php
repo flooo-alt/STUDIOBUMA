@@ -22,17 +22,16 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         $request->validate([
-            'email' => 'required|email',
+            'email' => 'required|email',  
             'password' => 'required',
         ]);
 
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-            // Cek role admin
+            // Cek role dan redirect sesuai role
             if (Auth::user()->role === 'admin') {
                 return redirect('/admin');
-            } else {
-                Auth::logout();
-                return back()->with('error', 'Hanya admin yang bisa login.');
+            } else if (Auth::user()->role === 'user') {
+                return redirect('/dashboard');
             }
         }
 

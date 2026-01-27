@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,3 +38,12 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::patch('/admin/booking/{id}/status', [AdminController::class, 'updateStatus'])->name('booking.updateStatus');
     Route::delete('/admin/booking/{id}', [AdminController::class, 'destroy'])->name('booking.destroy');
 });
+
+// Customer Routes (Protected)
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', [CustomerController::class, 'dashboard'])->name('customer.dashboard');
+});
+
+Route::post('/logout', [AuthController::class, 'logout'])
+    ->name('logout')
+    ->middleware('auth');

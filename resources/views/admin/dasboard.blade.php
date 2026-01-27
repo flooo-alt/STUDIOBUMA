@@ -402,19 +402,19 @@
         <div class="stats-grid">
             <div class="stat-card">
                 <span class="stat-icon">📋</span>
-                <div class="stat-label">Total Booking</div>
+                <div class="stat-label">Booking</div>
                 <div class="stat-number">{{ $totalBooking }}</div>
                 <div class="stat-change">Semua data booking</div>
             </div>
             <div class="stat-card">
                 <span class="stat-icon">⏳</span>
-                <div class="stat-label">Pending</div>
+                <div class="stat-label">Photoshoot</div>
                 <div class="stat-number">{{ $pendingBooking }}</div>
                 <div class="stat-change">Menunggu konfirmasi</div>
             </div>
             <div class="stat-card">
                 <span class="stat-icon">✅</span>
-                <div class="stat-label">Confirmed</div>
+                <div class="stat-label">Editing</div>
                 <div class="stat-number">{{ $confirmedBooking }}</div>
                 <div class="stat-change">Sudah dikonfirmasi</div>
             </div>

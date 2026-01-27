@@ -211,7 +211,7 @@
         </form>
 
         <div class="auth-footer">
-            Belum punya akun admin? Hubungi pemilik studio.
+            Belum punya akun? <a href="{{ route('signup') }}">Daftar di sini</a>
         </div>
     </div>
 </body>

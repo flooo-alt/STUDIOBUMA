@@ -183,6 +183,12 @@
             </div>
         @endif
 
+        @if(session('success'))
+            <div class="success-message">
+                {{ session('success') }}
+            </div>
+        @endif
+
         <form action="{{ route('signup') }}" method="POST">
             @csrf
 
