@@ -26,6 +26,25 @@ class AdminController extends Controller
         return view('admin.dasboard', compact('bookings', 'totalBooking', 'pendingBooking', 'confirmedBooking', 'completedBooking'));
     }
 
+    public function bookingsList()
+    {
+        $status = request('status');
+        
+        $query = Booking::orderBy('tanggal_pelayanan', 'asc');
+        
+        if ($status) {
+            $query->where('status', $status);
+        }
+        
+        $bookings = $query->paginate(15);
+        $totalBooking = Booking::count();
+        $pendingBooking = Booking::where('status', 'pending')->count();
+        $confirmedBooking = Booking::where('status', 'confirmed')->count();
+        $completedBooking = Booking::where('status', 'completed')->count();
+
+        return view('admin.bookings.index', compact('bookings', 'totalBooking', 'pendingBooking', 'confirmedBooking', 'completedBooking'));
+    }
+
     public function updateStatus(Request $request, $id)
     {
         $booking = Booking::findOrFail($id);

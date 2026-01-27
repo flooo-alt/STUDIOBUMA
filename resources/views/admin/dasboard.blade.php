@@ -368,14 +368,14 @@
             <div class="logo">🔐 Admin Panel BUMA</div>
             <ul class="nav-links">
                 <li><a href="{{ url('/') }}">← Kembali ke Beranda</a></li>
-                <li>
-                    <form action="{{ route('logout') }}" method="POST" style="display: inline;">
-                        @csrf
-                        <button type="submit" class="nav-links" style="background: none; border: none; color: white; cursor: pointer; padding: 8px 15px; border-radius: 5px;">
-                            🚪 Logout
-                        </button>
-                    </form>
-                </li>
+                 <a href="/admin">Dashboard</a>
+                <a href="/bookings">Pesanan</a>
+                <a href="/packages">Paket</a>
+                <a href="/">Home</a>
+                <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+                    @csrf
+                    <button type="submit" style="background: #B22222; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-family: 'Poppins'; font-weight: 600;">Logout</button>
+                </form>
             </ul>
         </nav>
     </header>

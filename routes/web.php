@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\PackageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,8 +36,12 @@ Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');
 // Admin Routes (Protected)
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin', [AdminController::class, 'index'])->name('admin.dashboard');
+    Route::get('/bookings', [AdminController::class, 'bookingsList'])->name('bookings.index');
     Route::patch('/admin/booking/{id}/status', [AdminController::class, 'updateStatus'])->name('booking.updateStatus');
     Route::delete('/admin/booking/{id}', [AdminController::class, 'destroy'])->name('booking.destroy');
+    
+    // Package CRUD Routes
+    Route::resource('packages', PackageController::class);
 });
 
 // Customer Routes (Protected)
