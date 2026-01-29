@@ -5,18 +5,18 @@
  }  
  
 :root {
-    --primary: #c08667;
-    --primary-dark: #341a;
-    --secondary: #3b6627;
-    --dark: #fdf6e3;
-    --darker: #fdf6e3;
-    --light: #59654e;
-    --text-muted: #b9a082;
+    --primary: #59654E;
+    --primary-dark: #48513F;
+    --secondary: #9E4A1E;
+    --dark: #FDF6E3;
+    --darker: #F7EED6;
+    --light: #59654E;
+    --text-muted: #666;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: #fdf6e3;
+    background: #FDF6E3;
     color: var(--light);
     line-height: 1.6;
     overflow-x: hidden;
