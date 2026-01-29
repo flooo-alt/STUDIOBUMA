@@ -6,10 +6,10 @@
     <title>Login Admin - Studio BUMA</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        
+
         body {
             font-family: 'Poppins', sans-serif;
-            background: #f0f4f8;
+            background: #F7EED6;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -32,7 +32,7 @@
         }
 
         .auth-header h2 {
-            color: #556B2F;
+            color: #59654E;
             font-size: 28px;
             margin-bottom: 10px;
         }
@@ -65,13 +65,13 @@
 
         input:focus {
             outline: none;
-            border-color: #556B2F;
+            border-color: #59654E;
         }
 
         button {
             width: 100%;
             padding: 12px;
-            background-color: #556B2F;
+            background-color: #59654E;
             color: white;
             border: none;
             border-radius: 8px;
@@ -84,24 +84,24 @@
         }
 
         button:hover {
-            background-color: #4B5320;
+            background-color: #48513F;
         }
 
         .error-message {
-            color: #B22222;
+            color: #9E4A1E;
             font-size: 14px;
             padding: 10px;
-            background-color: #ffe6e6;
+            background-color: #FED7B8;
             border-radius: 5px;
             margin-bottom: 15px;
             text-align: center;
         }
 
         .success-message {
-            color: #556B2F;
+            color: #59654E;
             font-size: 14px;
             padding: 10px;
-            background-color: #e6ffe6;
+            background-color: #E8EEE0;
             border-radius: 5px;
             margin-bottom: 15px;
             text-align: center;
@@ -115,35 +115,35 @@
         }
 
         .auth-footer a {
-            color: #556B2F;
+            color: #59654E;
             text-decoration: none;
             font-weight: 600;
             transition: color 0.3s;
         }
 
         .auth-footer a:hover {
-            color: #B22222;
+            color: #9E4A1E;
         }
 
         .back-link {
             display: inline-block;
             margin-bottom: 20px;
-            color: #556B2F;
+            color: #59654E;
             text-decoration: none;
             font-size: 14px;
             transition: color 0.3s;
         }
 
         .back-link:hover {
-            color: #B22222;
+            color: #9E4A1E;
         }
 
         .error-field {
-            border-color: #B22222 !important;
+            border-color: #9E4A1E !important;
         }
 
         .error-text {
-            color: #B22222;
+            color: #9E4A1E;
             font-size: 12px;
             margin-top: 5px;
         }

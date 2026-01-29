@@ -14,11 +14,11 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f5f5f5;
+            background-color: #FDF6E3;
         }
 
         header {
-            background: linear-gradient(135deg, #556B2F 0%, #4B5320 100%);
+            background: #59654E;
             color: white;
             padding: 20px 0;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -71,7 +71,7 @@
         }
 
         .page-header h1 {
-            color: #556B2F;
+            color: #59654E;
             font-size: 28px;
         }
 
@@ -94,7 +94,7 @@
 
         .filters select:focus {
             outline: none;
-            border-color: #556B2F;
+            border-color: #59654E;
         }
 
         .alert {
@@ -143,7 +143,7 @@
         }
 
         .stat-number {
-            color: #556B2F;
+            color: #59654E;
             font-size: 28px;
             font-weight: 700;
         }
@@ -161,7 +161,7 @@
         }
 
         thead {
-            background: #556B2F;
+            background: #59654E;
             color: white;
         }
 
@@ -272,18 +272,18 @@
             border-radius: 4px;
             border: 1px solid #ddd;
             text-decoration: none;
-            color: #556B2F;
+            color: #59654E;
         }
 
         .pagination a:hover {
-            background: #556B2F;
+            background: #59654E;
             color: white;
         }
 
         .pagination .active {
-            background: #556B2F;
+            background: #59654E;
             color: white;
-            border-color: #556B2F;
+            border-color: #59654E;
         }
 
         .customer-info {
@@ -322,7 +322,7 @@
         }
 
         .modal-header h2 {
-            color: #556B2F;
+            color: #59654E;
             font-size: 20px;
         }
 
@@ -351,7 +351,7 @@
 
         .form-group select:focus {
             outline: none;
-            border-color: #556B2F;
+            border-color: #59654E;
         }
 
         .modal-footer {
@@ -371,12 +371,12 @@
         }
 
         .btn-confirm {
-            background: #556B2F;
+            background: #59654E;
             color: white;
         }
 
         .btn-confirm:hover {
-            background: #4B5320;
+            background: #48513F;
         }
 
         .btn-cancel-modal {
@@ -432,7 +432,7 @@
                 <a href="/">Home</a>
                 <form action="{{ route('logout') }}" method="POST" style="display: inline;">
                     @csrf
-                    <button type="submit" style="background: #B22222; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-family: 'Poppins'; font-weight: 600;">Logout</button>
+                    <button type="submit" style="background: #9E4A1E; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-family: 'Poppins'; font-weight: 600;">Logout</button>
                 </form>
             </div>
         </nav>
@@ -617,3 +617,4 @@
     </script>
 </body>
 </html>
+

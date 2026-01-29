@@ -14,11 +14,11 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f5f5f5;
+            background-color: #FDF6E3;
         }
 
         .navbar {
-            background: linear-gradient(135deg, #556B2F 0%, #B22222 100%);
+            background: #59654E;
             padding: 1rem 2rem;
             color: white;
             display: flex;
@@ -55,7 +55,7 @@
         }
 
         .welcome h2 {
-            color: #556B2F;
+            color: #59654E;
             margin-bottom: 1rem;
         }
 
@@ -67,7 +67,7 @@
         }
 
         .booking-list h3 {
-            background: #556B2F;
+            background: #59654E;
             color: white;
             padding: 1.5rem;
             margin: 0;
@@ -87,7 +87,7 @@
         }
 
         .booking-info h4 {
-            color: #556B2F;
+            color: #59654E;
             margin-bottom: 0.5rem;
         }
 
@@ -132,7 +132,7 @@
         }
 
         .logout-btn {
-            background: #B22222;
+            background: #9E4A1E;
             color: white;
             padding: 0.5rem 1.5rem;
             border: none;
@@ -142,7 +142,7 @@
         }
 
         .logout-btn:hover {
-            background: #8b1a1a;
+            background: #7A3818;
         }
 
         /* Notifikasi Sukses Styling */
@@ -152,11 +152,11 @@
         }
 
         .alert-success-custom {
-            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            background: #59654E;
             color: white;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+            box-shadow: 0 4px 15px rgba(89, 101, 78, 0.3);
             border-left: 5px solid #fff;
             animation: slideDown 0.5s ease-out;
         }
@@ -411,3 +411,4 @@
     </div>
 </body>
 </html>
+

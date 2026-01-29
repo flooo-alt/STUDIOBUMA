@@ -15,13 +15,13 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #556B2F 0%, #f5f5f5 100%);
+            background: #59654E;
             min-height: 100vh;
             padding: 20px 0;
         }
 
         .navbar {
-            background: linear-gradient(135deg, #556B2F 0%, #B22222 100%);
+            background: #59654E;
             padding: 1rem 2rem;
             color: white;
             display: flex;
@@ -59,18 +59,18 @@
         .booking-header {
             text-align: center;
             margin-bottom: 2rem;
-            border-bottom: 2px solid #556B2F;
+            border-bottom: 2px solid #59654E;
             padding-bottom: 1.5rem;
         }
 
         .booking-header h2 {
-            color: #556B2F;
+            color: #59654E;
             font-weight: 700;
             margin-bottom: 0.5rem;
         }
 
         .booking-id {
-            color: #B22222;
+            color: #9E4A1E;
             font-size: 14px;
             font-weight: 600;
         }
@@ -91,7 +91,7 @@
         }
 
         .detail-item label {
-            color: #556B2F;
+            color: #59654E;
             font-weight: 600;
             display: block;
             margin-bottom: 0.5rem;
@@ -109,7 +109,7 @@
         }
 
         .progress-title {
-            color: #556B2F;
+            color: #59654E;
             font-weight: 700;
             text-align: center;
             margin-bottom: 2rem;
@@ -159,9 +159,9 @@
         }
 
         .step-circle.active {
-            background: #556B2F;
+            background: #59654E;
             color: white;
-            border-color: #556B2F;
+            border-color: #59654E;
             box-shadow: 0 4px 15px rgba(85, 107, 47, 0.4);
         }
 
@@ -180,7 +180,7 @@
         }
 
         .step-label.active {
-            color: #556B2F;
+            color: #59654E;
             font-weight: 700;
         }
 
@@ -190,7 +190,7 @@
         }
 
         .status-info {
-            background: linear-gradient(135deg, #556B2F 0%, #4B5320 100%);
+            background: #59654E;
             color: white;
             padding: 1.5rem;
             border-radius: 10px;
@@ -227,12 +227,12 @@
         }
 
         .btn-back {
-            background: #556B2F;
+            background: #59654E;
             color: white;
         }
 
         .btn-back:hover {
-            background: #4B5320;
+            background: #48513F;
             color: white;
             text-decoration: none;
         }
@@ -361,3 +361,4 @@
     </div>
 </body>
 </html>
+

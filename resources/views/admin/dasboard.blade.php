@@ -16,11 +16,11 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f5f5f5;
+            background-color: #FDF6E3;
         }
 
         header {
-            background: linear-gradient(135deg, #556B2F 0%, #4B5320 100%);
+            background: #59654E;
             color: white;
             padding: 20px 0;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -62,7 +62,7 @@
         }
 
         .admin-btn {
-            background-color: #B22222;
+            background-color: #9E4A1E;
             border-radius: 5px;
         }
 
@@ -82,7 +82,7 @@
         }
 
         .dashboard-header h1 {
-            color: #556B2F;
+            color: #59654E;
             font-size: 32px;
             font-weight: 700;
             margin-bottom: 10px;
@@ -105,7 +105,7 @@
             padding: 25px;
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-            border-left: 5px solid #556B2F;
+            border-left: 5px solid #59654E;
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
@@ -128,7 +128,7 @@
         }
 
         .stat-number {
-            color: #556B2F;
+            color: #59654E;
             font-size: 28px;
             font-weight: 700;
             margin-bottom: 5px;
@@ -149,7 +149,7 @@
         }
 
         .section-header h2 {
-            color: #556B2F;
+            color: #59654E;
             font-size: 24px;
             font-weight: 700;
             margin: 0;
@@ -172,7 +172,7 @@
 
         .filter-group select:focus {
             outline: none;
-            border-color: #556B2F;
+            border-color: #59654E;
         }
 
         .table-wrapper {
@@ -188,7 +188,7 @@
         }
 
         thead {
-            background-color: #556B2F;
+            background-color: #59654E;
             color: white;
         }
 
@@ -254,16 +254,16 @@
         }
 
         .btn-primary {
-            background-color: #556B2F;
+            background-color: #59654E;
             color: white;
         }
 
         .btn-primary:hover {
-            background-color: #4B5320;
+            background-color: #48513F;
         }
 
         .btn-danger {
-            background-color: #B22222;
+            background-color: #9E4A1E;
             color: white;
         }
 
@@ -307,7 +307,7 @@
 
         .alert-danger {
             background-color: #f8d7da;
-            border-color: #B22222;
+            border-color: #9E4A1E;
             color: #721c24;
         }
 
@@ -327,19 +327,19 @@
             border: 1px solid #ddd;
             border-radius: 5px;
             text-decoration: none;
-            color: #556B2F;
+            color: #59654E;
             transition: background-color 0.3s;
         }
 
         .pagination a:hover {
-            background-color: #556B2F;
+            background-color: #59654E;
             color: white;
         }
 
         .pagination .active {
-            background-color: #556B2F;
+            background-color: #59654E;
             color: white;
-            border-color: #556B2F;
+            border-color: #59654E;
         }
 
         @media (max-width: 768px) {
@@ -374,7 +374,7 @@
                 <a href="/">Home</a>
                 <form action="{{ route('logout') }}" method="POST" style="display: inline;">
                     @csrf
-                    <button type="submit" style="background: #B22222; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-family: 'Poppins'; font-weight: 600;">Logout</button>
+                    <button type="submit" style="background: #9E4A1E; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-family: 'Poppins'; font-weight: 600;">Logout</button>
                 </form>
             </ul>
         </nav>
@@ -400,7 +400,7 @@
 
         <!-- Quick Action Buttons -->
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 40px;">
-            <a href="{{ url('/bookings') }}" class="btn-sm" style="padding: 12px 20px; background: #556B2F; color: white; text-decoration: none; border-radius: 8px; text-align: center; font-weight: 600; transition: all 0.3s; box-shadow: 0 2px 8px rgba(85, 107, 47, 0.2);">
+            <a href="{{ url('/bookings') }}" class="btn-sm" style="padding: 12px 20px; background: #59654E; color: white; text-decoration: none; border-radius: 8px; text-align: center; font-weight: 600; transition: all 0.3s; box-shadow: 0 2px 8px rgba(85, 107, 47, 0.2);">
                 📋 Lihat Semua Booking
             </a>
             <a href="{{ url('/packages') }}" class="btn-sm" style="padding: 12px 20px; background: #28a745; color: white; text-decoration: none; border-radius: 8px; text-align: center; font-weight: 600; transition: all 0.3s; box-shadow: 0 2px 8px rgba(40, 167, 69, 0.2);">
@@ -558,7 +558,7 @@
                                 <td><strong>#{{ $booking->id }}</strong></td>
                                 <td>{{ $booking->nama }}</td>
                                 <td>
-                                    <a href="https://wa.me/{{ preg_replace('/\D/', '', $booking->nowa) }}" target="_blank" style="color: #556B2F; text-decoration: none; font-size: 12px;">
+                                    <a href="https://wa.me/{{ preg_replace('/\D/', '', $booking->nowa) }}" target="_blank" style="color: #59654E; text-decoration: none; font-size: 12px;">
                                         {{ substr($booking->nowa, -10) }}
                                     </a>
                                 </td>
@@ -615,3 +615,4 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+

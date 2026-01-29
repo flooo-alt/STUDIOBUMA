@@ -14,7 +14,7 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #556B2F 0%, #B22222 100%);
+            background: #59654E;
             min-height: 100vh;
             padding: 20px;
         }
@@ -34,7 +34,7 @@
         }
 
         .form-header h1 {
-            color: #556B2F;
+            color: #59654E;
             font-size: 24px;
             margin-bottom: 10px;
         }
@@ -66,7 +66,7 @@
 
         input:focus, textarea:focus, select:focus {
             outline: none;
-            border-color: #556B2F;
+            border-color: #59654E;
         }
 
         textarea {
@@ -81,7 +81,7 @@
         }
 
         .error-text {
-            color: #B22222;
+            color: #9E4A1E;
             font-size: 12px;
             margin-top: 5px;
         }
@@ -106,12 +106,12 @@
         }
 
         .btn-submit {
-            background: #556B2F;
+            background: #59654E;
             color: white;
         }
 
         .btn-submit:hover {
-            background: #4B5320;
+            background: #48513F;
         }
 
         .btn-cancel {
@@ -234,3 +234,4 @@
     </div>
 </body>
 </html>
+

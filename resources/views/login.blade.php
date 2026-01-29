@@ -24,7 +24,7 @@
             max-width: 400px;
         }
         h2 {
-            color: #B22222; /* Merah bata */
+            color: #9E4A1E; /* Merah bata */
             text-align: center;
             margin-bottom: 20px;
         }
@@ -34,7 +34,7 @@
         label {
             display: block;
             margin-bottom: 5px;
-            color: #556B2F; /* Hijau army */
+            color: #59654E; /* Hijau army */
         }
         input {
             width: 100%;
@@ -46,7 +46,7 @@
         button {
             width: 100%;
             padding: 10px;
-            background-color: #556B2F; /* Hijau army */
+            background-color: #59654E; /* Hijau army */
             color: white;
             border: none;
             border-radius: 5px;
@@ -54,10 +54,10 @@
             font-family: 'Poppins', sans-serif;
         }
         button:hover {
-            background-color: #4B5320;
+            background-color: #48513F;
         }
         .error {
-            color: #B22222;
+            color: #9E4A1E;
             text-align: center;
             margin-bottom: 10px;
         }

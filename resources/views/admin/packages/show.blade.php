@@ -14,7 +14,7 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #556B2F 0%, #B22222 100%);
+            background: #59654E;
             min-height: 100vh;
             padding: 20px;
         }
@@ -36,7 +36,7 @@
         }
 
         .header h1 {
-            color: #556B2F;
+            color: #59654E;
             font-size: 28px;
             margin-bottom: 10px;
         }
@@ -52,7 +52,7 @@
             background: #f9f9f9;
             padding: 15px;
             border-radius: 8px;
-            border-left: 4px solid #556B2F;
+            border-left: 4px solid #59654E;
         }
 
         .info-label {
@@ -72,7 +72,7 @@
             background: #f9f9f9;
             padding: 15px;
             border-radius: 8px;
-            border-left: 4px solid #556B2F;
+            border-left: 4px solid #59654E;
             margin: 20px 0;
             grid-column: 1 / -1;
         }
@@ -129,12 +129,12 @@
         }
 
         .btn-back {
-            background: #556B2F;
+            background: #59654E;
             color: white;
         }
 
         .btn-back:hover {
-            background: #4B5320;
+            background: #48513F;
         }
 
         @media (max-width: 600px) {
@@ -197,3 +197,4 @@
     </div>
 </body>
 </html>
+

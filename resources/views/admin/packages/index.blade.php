@@ -14,11 +14,11 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f5f5f5;
+            background-color: #FDF6E3;
         }
 
         header {
-            background: linear-gradient(135deg, #556B2F 0%, #4B5320 100%);
+            background: #59654E;
             color: white;
             padding: 20px 0;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -64,7 +64,7 @@
         }
 
         .page-header h1 {
-            color: #556B2F;
+            color: #59654E;
             font-size: 28px;
         }
 
@@ -83,12 +83,12 @@
         }
 
         .btn-primary {
-            background: #556B2F;
+            background: #59654E;
             color: white;
         }
 
         .btn-primary:hover {
-            background: #4B5320;
+            background: #48513F;
         }
 
         .btn-edit {
@@ -152,7 +152,7 @@
         }
 
         th {
-            background: #556B2F;
+            background: #59654E;
             color: white;
             padding: 15px;
             text-align: left;
@@ -214,18 +214,18 @@
             border-radius: 4px;
             border: 1px solid #ddd;
             text-decoration: none;
-            color: #556B2F;
+            color: #59654E;
         }
 
         .pagination a:hover {
-            background: #556B2F;
+            background: #59654E;
             color: white;
         }
 
         .pagination .active {
-            background: #556B2F;
+            background: #59654E;
             color: white;
-            border-color: #556B2F;
+            border-color: #59654E;
         }
 
         @media (max-width: 768px) {
@@ -330,3 +330,4 @@
     </div>
 </body>
 </html>
+
