@@ -12,6 +12,7 @@ class Booking extends Model
     protected $table = 'booking';
 
     protected $fillable = [
+        'user_id',
         'nama',
         'nowa',
         'booking_type',
@@ -20,6 +21,7 @@ class Booking extends Model
         'tanggal_pelayanan',
         'jam_pelayanan',
         'status',
+        'progress_stage',
     ];
 
     protected $casts = [

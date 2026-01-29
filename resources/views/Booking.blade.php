@@ -12,6 +12,7 @@
 </head>
 <body class="bg-light">
 
+@auth
 <div class="container mt-4">
     <!-- Penempatan: Di atas Card, rata kiri -->
     <div class="d-flex justify-content-start mb-3">
@@ -119,6 +120,22 @@
             </form>
         </div>
     </div>
+
+    <script src="{{ asset('js/script.js') }}"></script>
+</body>
+</html>
+@else
+<div class="container mt-4 d-flex align-items-center justify-content-center" style="height: 100vh;">
+    <div class="card shadow-lg p-5 text-center" style="max-width: 500px; border-radius: 15px;">
+        <h2 class="fw-bold mb-3" style="color: #333;">Harap Login Terlebih Dahulu</h2>
+        <p class="text-muted mb-4">Anda harus login untuk melakukan booking. Silakan login atau daftar akun baru.</p>
+        <div class="d-flex gap-2">
+            <a href="{{ route('login') }}" class="btn btn-primary w-50 fw-bold">Login</a>
+            <a href="{{ route('signup') }}" class="btn btn-success w-50 fw-bold">Daftar</a>
+        </div>
+    </div>
+</div>
+@endauth
 
     <script src="{{ asset('js/script.js') }}"></script>
 </body>

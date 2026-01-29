@@ -398,6 +398,22 @@
             </div>
         @endif
 
+        <!-- Quick Action Buttons -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 40px;">
+            <a href="{{ url('/bookings') }}" class="btn-sm" style="padding: 12px 20px; background: #556B2F; color: white; text-decoration: none; border-radius: 8px; text-align: center; font-weight: 600; transition: all 0.3s; box-shadow: 0 2px 8px rgba(85, 107, 47, 0.2);">
+                📋 Lihat Semua Booking
+            </a>
+            <a href="{{ url('/packages') }}" class="btn-sm" style="padding: 12px 20px; background: #28a745; color: white; text-decoration: none; border-radius: 8px; text-align: center; font-weight: 600; transition: all 0.3s; box-shadow: 0 2px 8px rgba(40, 167, 69, 0.2);">
+                📦 Kelola Paket
+            </a>
+            <a href="{{ url('/admin?status=pending') }}" class="btn-sm" style="padding: 12px 20px; background: #FFC107; color: #333; text-decoration: none; border-radius: 8px; text-align: center; font-weight: 600; transition: all 0.3s; box-shadow: 0 2px 8px rgba(255, 193, 7, 0.2);">
+                ⏳ Pending Booking
+            </a>
+            <a href="{{ url('/admin?status=confirmed') }}" class="btn-sm" style="padding: 12px 20px; background: #17a2b8; color: white; text-decoration: none; border-radius: 8px; text-align: center; font-weight: 600; transition: all 0.3s; box-shadow: 0 2px 8px rgba(23, 162, 184, 0.2);">
+                ✅ Confirmed Booking
+            </a>
+        </div>
+
         <!-- Stats Grid -->
         <div class="stats-grid">
             <div class="stat-card">
@@ -426,13 +442,100 @@
             </div>
         </div>
 
-        <!-- Booking Data Table -->
+        <!-- Bookings Dalam Proses -->
         <div class="section-header">
-            <h2>Daftar Booking</h2>
+            <h2>📋 Booking Yang Perlu Dikerjakan</h2>
+        </div>
+
+        @php
+            $confirmedBookings = $bookings->filter(fn($b) => $b->status === 'confirmed' || $b->progress_stage !== 'complete');
+        @endphp
+
+        @if($confirmedBookings->count() > 0)
+            <div class="table-wrapper" style="margin-bottom: 40px;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nama</th>
+                            <th>Paket</th>
+                            <th>Tanggal</th>
+                            <th>Progress</th>
+                            <th>Update Progress</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($confirmedBookings as $booking)
+                            <tr>
+                                <td><strong>#{{ $booking->id }}</strong></td>
+                                <td>{{ $booking->nama }}</td>
+                                <td>{{ $booking->paket }}</td>
+                                <td>{{ \Carbon\Carbon::parse($booking->tanggal_pelayanan)->format('d/m/Y') }}</td>
+                                <td>
+                                    <span class="status-badge" style="@switch($booking->progress_stage)
+                                        @case('pending') background-color: #fff3cd; color: #856404; @break
+                                        @case('photoshoot') background-color: #d4edda; color: #155724; @break
+                                        @case('edited') background-color: #d1ecf1; color: #0c5460; @break
+                                        @case('complete') background-color: #d4edda; color: #155724; @break
+                                    @endswitch">
+                                        @switch($booking->progress_stage)
+                                            @case('pending') Menunggu @break
+                                            @case('photoshoot') Photo Shoot @break
+                                            @case('edited') Diedit @break
+                                            @case('complete') Selesai @break
+                                            @default {{ ucfirst($booking->progress_stage) }}
+                                        @endswitch
+                                    </span>
+                                </td>
+                                <td>
+                                    <form action="{{ route('booking.updateProgress', $booking->id) }}" method="POST" style="display: inline;">
+                                        @csrf
+                                        @method('PATCH')
+                                        <select name="progress_stage" onchange="this.form.submit()" style="padding: 6px 8px; border: 1px solid #ddd; border-radius: 5px; cursor: pointer; font-family: 'Poppins'; font-size: 12px;">
+                                            <option value="pending" {{ $booking->progress_stage == 'pending' ? 'selected' : '' }}>Menunggu</option>
+                                            <option value="photoshoot" {{ $booking->progress_stage == 'photoshoot' ? 'selected' : '' }}>Photo Shoot</option>
+                                            <option value="edited" {{ $booking->progress_stage == 'edited' ? 'selected' : '' }}>Diedit</option>
+                                            <option value="complete" {{ $booking->progress_stage == 'complete' ? 'selected' : '' }}>Selesai</option>
+                                        </select>
+                                    </form>
+                                </td>
+                                <td>
+                                    <a href="https://wa.me/{{ preg_replace('/\D/', '', $booking->nowa) }}" target="_blank" class="btn-sm btn-primary" title="Chat WhatsApp">Chat</a>
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        @else
+            <div class="table-wrapper" style="margin-bottom: 40px;">
+                <div class="empty-state">
+                    <p>✓ Semua booking sudah selesai!</p>
+                </div>
+            </div>
+        @endif
+
+        <!-- Semua Data Booking -->
+        <div class="section-header">
+            <h2>📊 Semua Data Booking</h2>
+            <div class="filter-group">
+                <form method="GET" action="{{ url('/admin') }}" style="display: flex; gap: 10px;">
+                    <select name="status" onchange="this.form.submit()">
+                        <option value="">Semua Status</option>
+                        <option value="pending" {{ request('status') == 'pending' ? 'selected' : '' }}>Pending</option>
+                        <option value="confirmed" {{ request('status') == 'confirmed' ? 'selected' : '' }}>Confirmed</option>
+                        <option value="completed" {{ request('status') == 'completed' ? 'selected' : '' }}>Completed</option>
+                        <option value="cancelled" {{ request('status') == 'cancelled' ? 'selected' : '' }}>Cancelled</option>
+                    </select>
+                    <a href="{{ url('/admin') }}" class="btn-sm btn-primary" style="padding: 8px 12px; text-decoration: none; display: inline-block;">Reset Filter</a>
+                    <a href="{{ url('/bookings') }}" class="btn-sm btn-primary" style="padding: 8px 12px; text-decoration: none; display: inline-block;">Lihat Detail</a>
+                </form>
+            </div>
         </div>
 
         @if($bookings->count() > 0)
-            <div class="table-wrapper">
+            <div class="table-wrapper" style="margin-bottom: 40px; overflow-x: auto;">
                 <table>
                     <thead>
                         <tr>
@@ -441,10 +544,11 @@
                             <th>No WA</th>
                             <th>Tipe</th>
                             <th>Paket</th>
-                            <th>Orang</th>
+                            <th>Jumlah</th>
                             <th>Tanggal</th>
                             <th>Jam</th>
                             <th>Status</th>
+                            <th>Progress</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -454,13 +558,13 @@
                                 <td><strong>#{{ $booking->id }}</strong></td>
                                 <td>{{ $booking->nama }}</td>
                                 <td>
-                                    <a href="https://wa.me/{{ preg_replace('/\D/', '', $booking->nowa) }}" target="_blank" title="Chat WhatsApp">
-                                        {{ $booking->nowa }}
+                                    <a href="https://wa.me/{{ preg_replace('/\D/', '', $booking->nowa) }}" target="_blank" style="color: #556B2F; text-decoration: none; font-size: 12px;">
+                                        {{ substr($booking->nowa, -10) }}
                                     </a>
                                 </td>
-                                <td>{{ ucfirst($booking->booking_type) }}</td>
+                                <td><span style="background: #f0f0f0; padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">{{ ucfirst($booking->booking_type) }}</span></td>
                                 <td>{{ $booking->paket }}</td>
-                                <td>{{ $booking->jumlah_orang }} orang</td>
+                                <td>{{ $booking->jumlah_orang }}</td>
                                 <td>{{ \Carbon\Carbon::parse($booking->tanggal_pelayanan)->format('d/m/Y') }}</td>
                                 <td>{{ \Carbon\Carbon::parse($booking->jam_pelayanan)->format('H:i') }}</td>
                                 <td>
@@ -469,23 +573,23 @@
                                     </span>
                                 </td>
                                 <td>
-                                    <div class="action-buttons">
-                                        <form action="{{ route('booking.updateStatus', $booking->id) }}" method="POST" style="display: inline;">
-                                            @csrf
-                                            @method('PATCH')
-                                            <select name="status" onchange="this.form.submit()" class="btn-sm btn-primary" style="padding: 6px 8px; cursor: pointer;">
-                                                <option value="pending" {{ $booking->status == 'pending' ? 'selected' : '' }}>Pending</option>
-                                                <option value="confirmed" {{ $booking->status == 'confirmed' ? 'selected' : '' }}>Confirmed</option>
-                                                <option value="completed" {{ $booking->status == 'completed' ? 'selected' : '' }}>Completed</option>
-                                                <option value="cancelled" {{ $booking->status == 'cancelled' ? 'selected' : '' }}>Cancelled</option>
-                                            </select>
-                                        </form>
-                                        <form action="{{ route('booking.destroy', $booking->id) }}" method="POST" style="display: inline;" onsubmit="return confirm('Yakin hapus booking ini?');">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class="btn-sm btn-danger">Hapus</button>
-                                        </form>
-                                    </div>
+                                    <span class="status-badge" style="@switch($booking->progress_stage)
+                                        @case('pending') background-color: #fff3cd; color: #856404; @break
+                                        @case('photoshoot') background-color: #d4edda; color: #155724; @break
+                                        @case('edited') background-color: #d1ecf1; color: #0c5460; @break
+                                        @case('complete') background-color: #d4edda; color: #155724; @break
+                                    @endswitch">
+                                        @switch($booking->progress_stage)
+                                            @case('pending') Pending @break
+                                            @case('photoshoot') Shoot @break
+                                            @case('edited') Edited @break
+                                            @case('complete') Done @break
+                                            @default {{ ucfirst($booking->progress_stage) }}
+                                        @endswitch
+                                    </span>
+                                </td>
+                                <td>
+                                    <a href="https://wa.me/{{ preg_replace('/\D/', '', $booking->nowa) }}" target="_blank" class="btn-sm btn-primary" title="Chat WhatsApp" style="text-decoration: none;">💬</a>
                                 </td>
                             </tr>
                         @endforeach

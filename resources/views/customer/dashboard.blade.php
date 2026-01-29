@@ -145,6 +145,126 @@
             background: #8b1a1a;
         }
 
+        /* Notifikasi Sukses Styling */
+        .alert-notification {
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+
+        .alert-success-custom {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+            border-left: 5px solid #fff;
+            animation: slideDown 0.5s ease-out;
+        }
+
+        .alert-success-custom .alert-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .alert-success-custom .alert-icon {
+            font-size: 28px;
+            animation: popIn 0.5s ease-out;
+        }
+
+        .alert-success-custom .alert-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .alert-success-custom .alert-message {
+            font-size: 14px;
+            margin-bottom: 15px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .alert-success-custom .alert-details {
+            background: rgba(0, 0, 0, 0.1);
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        .alert-success-custom .alert-action {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+
+        .alert-success-custom .btn-action {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-action-primary {
+            background: white;
+            color: #28a745;
+        }
+
+        .btn-action-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-action-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-action-secondary:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .close-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            padding: 4px 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 20px;
+            transition: all 0.3s;
+        }
+
+        .close-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes popIn {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
         @media (max-width: 768px) {
             .booking-item {
                 grid-template-columns: 1fr;
@@ -157,6 +277,15 @@
 
             .navbar a {
                 margin-left: 0;
+            }
+
+            .alert-success-custom .alert-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .alert-success-custom .alert-action {
+                flex-direction: column;
             }
         }
     </style>
@@ -175,6 +304,50 @@
     </div>
 
     <div class="container">
+        <!-- Notifikasi Sukses Booking -->
+        @if(session('success'))
+            <div class="alert-notification" id="successNotif">
+                <div class="alert-success-custom">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <div>
+                            <div class="alert-header">
+                                <span class="alert-icon">✅</span>
+                                <h3 class="alert-title">Booking Berhasil!</h3>
+                            </div>
+                            <p class="alert-message">
+                                {{ session('success') }}
+                            </p>
+                            <div class="alert-details">
+                                <p style="margin: 0;">
+                                    <strong>💡 Tip:</strong> Admin akan segera mengkonfirmasi booking Anda. Anda akan menerima notifikasi via WhatsApp.
+                                </p>
+                            </div>
+                            <div class="alert-action">
+                                <a href="/Booking" class="btn-action btn-action-secondary" onclick="event.preventDefault(); document.getElementById('successNotif').remove();">
+                                    ← Kembali Booking Baru
+                                </a>
+                                <button type="button" class="btn-action btn-action-primary" onclick="document.getElementById('successNotif').style.display='none';">
+                                    Tutup Notifikasi
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" class="close-btn" onclick="document.getElementById('successNotif').remove();">×</button>
+                    </div>
+                </div>
+            </div>
+            <script>
+                // Auto-hide notifikasi setelah 8 detik
+                setTimeout(function() {
+                    const notif = document.getElementById('successNotif');
+                    if (notif) {
+                        notif.style.opacity = '0';
+                        notif.style.transition = 'opacity 0.5s ease-out';
+                        setTimeout(() => notif.remove(), 500);
+                    }
+                }, 8000);
+            </script>
+        @endif
+
         <div class="welcome">
             <h2>Selamat datang, {{ Auth::user()->name }}! 👋</h2>
             <p>Berikut adalah daftar booking Anda di Studio BUMA</p>

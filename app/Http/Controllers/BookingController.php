@@ -25,7 +25,8 @@ class BookingController extends Controller
             'jam_pelayanan' => 'required|date_format:H:i'
         ]);
 
-        Booking::create([
+        $booking = Booking::create([
+            'user_id' => auth()->id(),
             'nama' => $request->nama,
             'nowa' => $request->nowa,
             'booking_type' => $request->booking_type,
@@ -36,7 +37,9 @@ class BookingController extends Controller
             'status' => 'pending'
         ]);
 
-        return redirect('/Booking')->with('success', 'Booking berhasil! Tunggu konfirmasi dari admin.');
+        $message = "Paket '{$booking->paket}' untuk {$booking->jumlah_orang} orang telah berhasil dipesan. Tanggal pelayanan: " . \Carbon\Carbon::parse($booking->tanggal_pelayanan)->format('d/m/Y') . " pukul " . date('H:i', strtotime($booking->jam_pelayanan));
+
+        return redirect('/dashboard')->with('success', $message);
     }
 }
 

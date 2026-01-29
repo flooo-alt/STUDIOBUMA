@@ -6,20 +6,15 @@
     <title>Login Admin - Studio BUMA</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #556B2F 0%, #B22222 100%);
+            background: #f0f4f8;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            padding: 20px;
+            height: 100vh;
+            margin: 0;
         }
 
         .auth-container {

@@ -60,4 +60,12 @@ class AdminController extends Controller
         
         return back()->with('success', 'Booking berhasil dihapus.');
     }
+
+    public function updateProgress(Request $request, $id)
+    {
+        $booking = Booking::findOrFail($id);
+        $booking->update(['progress_stage' => $request->progress_stage]);
+        
+        return back()->with('success', 'Progress booking berhasil diperbarui.');
+    }
 }
