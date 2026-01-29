@@ -429,7 +429,6 @@
             <div class="nav-links">
                 <a href="/admin">Dashboard</a>
                 <a href="/bookings">Pesanan</a>
-                <a href="/packages">Paket</a>
                 <a href="/">Home</a>
                 <form action="{{ route('logout') }}" method="POST" style="display: inline;">
                     @csrf
