@@ -14,7 +14,7 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: #59654E;
+            background: #F7EED6;
             min-height: 100vh;
             padding: 20px;
         }

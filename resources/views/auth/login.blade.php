@@ -154,7 +154,7 @@
         <a href="/" class="back-link">← Kembali ke Beranda</a>
         
         <div class="auth-header">
-            <h2>🔐 Login Admin</h2>
+            <h2>🔐 Login</h2>
             <p>Masuk ke Dashboard Admin Studio BUMA</p>
         </div>
 

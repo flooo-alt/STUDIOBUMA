@@ -224,13 +224,6 @@
         </footer>
     </div>
 
-   
-
-        <footer>
-            <p>&copy; 2026 BUMA STUDIO. All rights reserved.</p>
-        </footer>
-    </div>
-
     <script src="{{ asset('js/script.js') }}"></script>
 
 </body>

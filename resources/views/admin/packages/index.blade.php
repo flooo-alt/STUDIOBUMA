@@ -14,7 +14,7 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #FDF6E3;
+            background-color: #F7EED6;
         }
 
         header {

@@ -120,15 +120,8 @@ function createWhatsAppButton() {
     document.body.appendChild(whatsappButton);
 }
 
-// Page initialization
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('Adiba Photocopy website loaded successfully');
-    createWhatsAppButton();
-
     //form
         document.querySelector("form").addEventListener("submit", function(){
             alert("Apakah data sudah sesuai?");
         });
  
-
-});

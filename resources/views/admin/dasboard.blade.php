@@ -163,7 +163,7 @@
 
         .filter-group select {
             padding: 8px 12px;
-            border: 2px solid #ddd;
+            border: 2px solid #dddd;
             border-radius: 5px;
             font-family: 'Poppins', sans-serif;
             cursor: pointer;
@@ -206,7 +206,7 @@
         }
 
         tbody tr:hover {
-            background-color: #f9f9f9;
+            background-color: #d4eeb6;
         }
 
         .status-badge {

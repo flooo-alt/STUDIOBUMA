@@ -84,7 +84,7 @@
 
         .filters select {
             padding: 10px 15px;
-            border: 2px solid #e0e0e0;
+            border: 2px solid #59654E;
             border-radius: 8px;
             font-family: 'Poppins', sans-serif;
             background: white;
@@ -173,11 +173,12 @@
 
         td {
             padding: 15px;
-            border-bottom: 1px solid #eee;
+            border: 2px solid #d1e2c0;
+            border-bottom: 1px solid #afce8f;
         }
 
         tbody tr:hover {
-            background: #f9f9f9;
+            background: #d4eeb6;
         }
 
         .status-badge {

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Admin</title>
+    <title>Login</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
@@ -65,7 +65,7 @@
 </head>
 <body>
     <div class="login-container">
-        <h2>Login Admin</h2>
+        <h2>Login admin</h2>
         @if(session('error'))
             <div class="error">{{ session('error') }}</div>
         @endif
